@@ -7,23 +7,25 @@
     <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
   </ion-pane>
 
-  <ion-side-menu side="left">
+  <ion-side-menu side="left" expose-aside-when="large">
+      <!--
     <header class="bar bar-header bar-stable">
       <h1 class="title">Left</h1>
     </header>
+    -->
     <ion-content class="has-header">
       <ion-list>
-        <ion-item nav-clear menu-close ng-click="login()">
-          Login
+        <ion-item nav-clear menu-close class="navItemBond">
+            <a href="#/app/search">BONDS</a>
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/search">
-          Search
+        <ion-item nav-clear menu-close class="navItemGirls">
+            <a href="#/app/search">BONDGIRLS</a>
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/browse">
-          Browse
+        <ion-item nav-clear menu-close class="navItemCars">
+            <a href="#/app/browse">CARS</a>
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/playlists">
-          Playlists
+        <ion-item nav-clear menu-close class="navItemMap">
+            <a href="#/app/playlists">MAP</a>
         </ion-item>
       </ion-list>
     </ion-content>

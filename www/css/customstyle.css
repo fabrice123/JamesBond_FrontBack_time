@@ -1,0 +1,84 @@
+.navItemBond {
+  text-align: center;
+  padding: 0px;
+  background-image: url("../img/BondNavigation.png");
+  background-repeat: no-repeat;
+  background-size: 110%;
+  padding-top: 100px;
+  position: relative; }
+  .navItemBond a {
+    background-color: transparent;
+    position: absolute;
+    top: 0px;
+    left: -10px;
+    padding-left: 100px;
+    padding-right: 120px;
+    padding-bottom: 50px;
+    padding-top: 40px;
+    color: white;
+    text-decoration: none;
+    font-family: Gulim;
+    font-size: 36px;
+    letter-spacing: -2px; }
+
+.navItemGirls {
+  text-align: center;
+  padding: 0px;
+  background-image: url("../img/Bondgirl.png");
+  background-repeat: no-repeat;
+  background-size: 110%;
+  padding-top: 100px;
+  position: relative; }
+  .navItemGirls a {
+    background-color: transparent;
+    position: absolute;
+    top: 0px;
+    left: -10px;
+    padding-left: 130px;
+    padding-right: 120px;
+    padding-bottom: 50px;
+    padding-top: 40px;
+    color: white;
+    text-decoration: none; }
+
+.navItemCars {
+  text-align: center;
+  padding: 0px;
+  background-image: url("../img/BondCar.png");
+  background-repeat: no-repeat;
+  background-size: 110%;
+  padding-top: 100px;
+  position: relative; }
+  .navItemCars a {
+    background-color: transparent;
+    position: absolute;
+    top: 0px;
+    left: -10px;
+    padding-left: 130px;
+    padding-right: 120px;
+    padding-bottom: 50px;
+    padding-top: 40px;
+    color: white;
+    text-decoration: none; }
+
+.navItemMap {
+  text-align: center;
+  padding: 0px;
+  background-image: url("../img/locatie.png");
+  background-repeat: no-repeat;
+  background-size: 110%;
+  padding-top: 100px;
+  position: relative; }
+  .navItemMap a {
+    background-color: transparent;
+    position: absolute;
+    top: 0px;
+    left: -10px;
+    padding-left: 130px;
+    padding-right: 120px;
+    padding-bottom: 50px;
+    padding-top: 40px;
+    color: white;
+    text-decoration: none; }
+
+/*# sourceMappingURL=customstyle.css.map */
