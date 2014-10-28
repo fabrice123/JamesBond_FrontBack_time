@@ -114,6 +114,7 @@ $achtergrond: #faf2f2;
 
 @keyframes underlineNav {
   50% {
+
     -moz-text-decoration-color: $rood; /* Firefox */
     -text-decoration-color: $rood; /* IE */
   }
@@ -162,14 +163,15 @@ $achtergrond: #faf2f2;
   transition: all 0.8s ease 0.1s;
   width: 18px;
   display: inline-block;
+&:hover {
+    width: 10px;
+    height: 10px;
+    margin: 305px;
+    background: none repeat scroll 0 0 $rood;
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 1);
+  }
 }
-.dot:hover {
-  width: 10px;
-  height: 10px;
-  margin: 305px;
-  background: none repeat scroll 0 0 $rood;
-  box-shadow: 0 0 0 10px rgba(255, 255, 255, 1);
-}
+
 .address{
   position: absolute;
   margin-top: 265px;
@@ -180,7 +182,7 @@ $achtergrond: #faf2f2;
   text-decoration: none;
   font-size:15px;
   transition: all 0.8s ease 0.1s;
-}
-.address:hover{
-  color: $rood;
+ &:hover{
+    color: $rood;
+  }
 }

@@ -34,7 +34,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       url: "/bonds",
       views: {
         'menuContent' :{
-          templateUrl: "templates/bonds.html"
+          templateUrl: "templates/bonds.html",
+            controller: 'BondsCtrl'
         }
       }
     })
@@ -67,6 +68,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/bonds');
 });
 

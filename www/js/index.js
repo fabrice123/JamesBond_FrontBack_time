@@ -4,27 +4,22 @@
 
 var bondArray = new Array();
 
-bondArray[0] = new Image();
 bondArray[0].src = 'img/SeanConnery.png';
 
-bondArray[1] = new Image();
 bondArray[1].src = 'img/GeorgeLazenby.png';
 
-bondArray[2] = new Image();
 bondArray[2].src = 'img/TimothyDalton.png';
 
-bondArray[3] = new Image();
 bondArray[3].src = 'img/RogerMoore.png';
 
-bondArray[4] = new Image();
 bondArray[4].src = 'img/PierceBrosnan.png';
 
 bondArray[5] = new Image();
 bondArray[5].src = 'img/DanielCraig.png';
-
+console.log(bondArray);
 /*------------------------------------*/
 
-function nextImage(element)
+$scope.nextImage=function(element)
 {
     var img = document.getElementById(element);
 
@@ -43,7 +38,7 @@ function nextImage(element)
     }
 }
 
-function previousImage(element)
+$scope.previousImage=function(element)
 {
     var img = document.getElementById(element);
 
