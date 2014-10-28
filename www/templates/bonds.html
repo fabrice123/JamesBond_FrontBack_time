@@ -4,10 +4,12 @@
   </ion-nav-buttons>
   <ion-content class="has-header">
     <div class="bonds">
-        <img src="img/SeanConnery.png" class="bondImage" />
+        <img src="img/SeanConnery.png" class="bondImage" id="mainBond" />
         <div class="bondNames">
-            <p class="bondFirstname">Sean</p>
-            <p class="bondName">Connery</p>
+            <p id="firstname" class="bondFirstname">Sean</p>
+            <p id="lastname" class="bondName">Connery</p>
+            <button id="leftScroll" class="button button-icon icon ion-chevron-left" onclick="previousImage('mainBond')"></button>
+            <button id="rightScroll" class="button button-icon icon ion-chevron-right" onclick="nextImage('mainBond')"></button>
         </div>
     </div>
   </ion-content>
