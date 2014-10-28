@@ -1,4 +1,5 @@
 $rood : #b10a0a;
+$achtergrond: #faf2f2;
 
 .navItemBond{
   text-align: center;
@@ -108,12 +109,38 @@ $rood : #b10a0a;
   text-decoration: underline;
   text-decoration-color: transparent;
   -moz-text-decoration-color: transparent;
-  animation: underlineNav 3s infinite;
+  animation: underlineNav 2s infinite;
 }
 
 @keyframes underlineNav {
   50% {
     -moz-text-decoration-color: $rood; /* Firefox */
-    -text-decoration-color: $rood;
+    -text-decoration-color: $rood; /* IE */
+  }
+}
+.bonds{
+  text-align: center;
+  background-color: $achtergrond;
+}
+.bondImage{
+  height: 93vh;
+  z-index: -1;
+}
+.bondNames{
+  position: absolute;
+  margin-top: -470px;
+  width: 100%;
+
+  .bondFirstname{
+    font-family: franchise;
+    font-size: 72px;
+    margin-left: -300px;
+    margin-top: 25px;
+  }
+  .bondName{
+    font-family: franchise;
+    font-size: 72px;
+    margin-left: 370px;
+    margin-top: -30px;
   }
 }

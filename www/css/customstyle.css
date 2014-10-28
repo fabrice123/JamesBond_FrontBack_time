@@ -94,12 +94,35 @@
   text-decoration: underline;
   text-decoration-color: transparent;
   -moz-text-decoration-color: transparent;
-  animation: underlineNav 3s infinite; }
+  animation: underlineNav 2s infinite; }
 
 @keyframes underlineNav {
   50% {
     -moz-text-decoration-color: #b10a0a;
     /* Firefox */
-    -text-decoration-color: #b10a0a; } }
+    -text-decoration-color: #b10a0a;
+    /* IE */ } }
+.bonds {
+  text-align: center;
+  background-color: #faf2f2; }
+
+.bondImage {
+  height: 93vh;
+  z-index: -1; }
+
+.bondNames {
+  position: absolute;
+  margin-top: -470px;
+  width: 100%; }
+  .bondNames .bondFirstname {
+    font-family: franchise;
+    font-size: 72px;
+    margin-left: -300px;
+    margin-top: 25px; }
+  .bondNames .bondName {
+    font-family: franchise;
+    font-size: 72px;
+    margin-left: 370px;
+    margin-top: -30px; }
 
 /*# sourceMappingURL=customstyle.css.map */
