@@ -1,6 +1,28 @@
 angular.module('starter.controllers', [])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+       document.getElementById("jbaudio").load();
+        document.getElementById("jbaudio").play();
+        $scope.volumOnorOff=function() {
+            var getvolume = document.getElementById("volume");
+
+            var volumelogo = getvolume.className;
+
+            if (volumelogo == "button button-icon icon ion-volume-high activated") {
+                console.log("volumelogo");
+                getvolume.className = "button button-icon icon ion-volume-mute";
+                document.getElementById("jbaudio").pause();
+            }
+            if (volumelogo == "button button-icon icon ion-volume-mute activated") {
+                console.log("volumelogo");
+                getvolume.className = "button button-icon icon ion-volume-high";
+                document.getElementById("jbaudio").play();
+            }
+        }
+
+
+
+
   // Form data for the login modal
   $scope.loginData = {};
 

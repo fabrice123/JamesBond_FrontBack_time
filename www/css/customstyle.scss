@@ -31,7 +31,7 @@ $jbblack:#131211;
     div{
       background: transparent;
       width: 100px;
-      height: 30px;
+      height: 1.3em;
       margin-left: 2px;
     }
   }
@@ -64,7 +64,7 @@ $jbblack:#131211;
     div{
       background: transparent;
       width: 160px;
-      height: 30px;
+      height: 1.3em;
       margin-left: 2px;
     }
   }
@@ -97,7 +97,7 @@ $jbblack:#131211;
     div{
       background: transparent;
       width: 80px;
-      height: 30px;
+      height: 1.3em;
       margin-left: 5px;
     }
   }
@@ -275,8 +275,7 @@ width: 233px;
 #volume{
   display: block;
   color: $achtergrond;
-  position: absolute;
-  left: 95%;
+
 }
 
 /*mediaquery vanaf 1200px */
@@ -285,9 +284,7 @@ width: 233px;
 
     left:38%;
   }
-  #volume{
-    left: 90%;
-  }
+
 }
 
 
