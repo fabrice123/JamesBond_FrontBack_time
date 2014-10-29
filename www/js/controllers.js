@@ -43,6 +43,7 @@ angular.module('starter.controllers', [])
             {  id: 5 },
             { id: 6 }
         ];
+
         $scope.bonds[0].imagesrc=new Image();
         $scope.bonds[0].imagesrc.src='img/SeanConnery.png';
         $scope.bonds[1].imagesrc=new Image();
@@ -56,7 +57,7 @@ angular.module('starter.controllers', [])
         $scope.bonds[5].imagesrc=new Image();
         $scope.bonds[5].imagesrc.src='img/DanielCraig.png';
 
-        console.log($scope.bonds);
+        console.log($scope.bonds[0]);
 
         $scope.nextImage=function(element)
         {

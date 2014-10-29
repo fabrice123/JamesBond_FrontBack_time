@@ -20,6 +20,11 @@
     font-family: Gulim;
     font-size: 30px;
     letter-spacing: -2px; }
+    .navItemBond a div {
+      background: transparent;
+      width: 100px;
+      height: 30px;
+      margin-left: 2px; }
 
 .navItemGirls {
   text-align: center;
@@ -43,6 +48,11 @@
     font-family: Gulim;
     font-size: 30px;
     letter-spacing: -2px; }
+    .navItemGirls a div {
+      background: transparent;
+      width: 160px;
+      height: 30px;
+      margin-left: 2px; }
 
 .navItemCars {
   text-align: center;
@@ -66,15 +76,20 @@
     font-family: Gulim;
     font-size: 30px;
     letter-spacing: -2px; }
+    .navItemCars a div {
+      background: transparent;
+      width: 80px;
+      height: 30px;
+      margin-left: 5px; }
 
 .navItemMap {
   text-align: center;
   padding: 0px;
   background-image: url("../img/locatie.png");
   background-repeat: no-repeat;
-  background-size: 110%;
   padding-top: 100px;
-  position: relative; }
+  position: relative;
+  background-size: 110%; }
   .navItemMap a {
     background-color: transparent;
     position: absolute;
@@ -89,19 +104,37 @@
     font-size: 30px;
     letter-spacing: -2px;
     text-decoration: none; }
+    .navItemMap a div {
+      background: transparent;
+      width: 60px;
+      height: 30px;
+      margin-left: 2px; }
 
-.navItemBond a:hover, .navItemCars a:hover, .navItemGirls a:hover, .navItemMap a:hover {
-  text-decoration: underline;
-  text-decoration-color: transparent;
-  -moz-text-decoration-color: transparent;
-  animation: underlineNav 2s infinite; }
+.navItemBond a div:hover, .navItemGirls a div:hover, .navItemCars a div:hover, .navItemMap a div:hover {
+  border-bottom: 2px solid transparent;
+  animation: underlineNav 2s;
+  -webkit-animation: underlineNav 2s; }
 
+.navItemMap:hover, .navItemGirls:hover, .navItemBond:hover, .navItemCars:hover {
+  animation: scaleNav 2s;
+  -webkit-animation: scaleNav 2s; }
+
+@-webkit-keyframes underlineNav {
+  100% {
+    border-bottom: 2px solid #b10a0a; } }
 @keyframes underlineNav {
-  50% {
-    -moz-text-decoration-color: #b10a0a;
-    /* Firefox */
-    -text-decoration-color: #b10a0a;
-    /* IE */ } }
+  100% {
+    border-bottom: 2px solid #b10a0a; } }
+@-webkit-keyframes scaleNav {
+  from {
+    background-size: 110%; }
+  to {
+    background-size: 120%; } }
+@keyframes scaleNav {
+  from {
+    background-size: 110%; }
+  to {
+    background-size: 120%; } }
 .bonds {
   text-align: center;
   background-color: #faf2f2; }
@@ -160,3 +193,5 @@
   transition: all 0.8s ease 0.1s; }
   .address:hover {
     color: #b10a0a; }
+
+/*# sourceMappingURL=customstyle.css.map */
