@@ -31,7 +31,7 @@ $jbblack:#131211;
     div{
       background: transparent;
       width: 100px;
-      height: 30px;
+      height: 1.3em;
       margin-left: 2px;
     }
   }
@@ -64,7 +64,7 @@ $jbblack:#131211;
     div{
       background: transparent;
       width: 160px;
-      height: 30px;
+      height: 1.3em;
       margin-left: 2px;
     }
   }
@@ -97,7 +97,7 @@ $jbblack:#131211;
     div{
       background: transparent;
       width: 80px;
-      height: 30px;
+      height: 1.3em;
       margin-left: 5px;
     }
   }
@@ -128,7 +128,7 @@ $jbblack:#131211;
     text-decoration: none;
 
     div{
-      background: $rood;
+      background: transparent;
       width: 60px;
       height: 1.3em;
       margin-left: 2px;
@@ -207,19 +207,21 @@ $jbblack:#131211;
     font-size: 5em;
     margin-left: -300px;
     margin-top: 25px;
+    text-shadow: 2px -2px 4px rgba(28, 28, 28, 0.45);
   }
   .bondName{
     font-family: franchise;
     font-size: 5em;
     margin-left: 370px;
     margin-top: -30px;
+    text-shadow: 2px -2px 4px rgba(28, 28, 28, 0.45);
   }
   #leftScroll{
-    margin-top: -47px;
+    margin-top: -140px;
     margin-left: 80px;
   }
   #rightScroll{
-    margin-top: -47px;
+    margin-top: -140px;
     margin-left: 550px;
   }
 }
@@ -254,7 +256,8 @@ $jbblack:#131211;
   transition: all 0.8s ease 0.1s;
  &:hover{
     color: $rood;
-  }
+    text-decoration: none;
+ }
 }
 
 .dotPics {
@@ -287,6 +290,7 @@ $jbblack:#131211;
   transition: all 0.8s ease 0.1s;
   &:hover{
     color: $rood;
+    text-decoration: none;
   }
 }
 
@@ -306,6 +310,7 @@ $jbblack:#131211;
     margin: 105px;
     background: none repeat scroll 0 0 $rood;
     box-shadow: 0 0 0 10px rgba(255, 255, 255, 1);
+
   }
 }
 
@@ -320,6 +325,7 @@ $jbblack:#131211;
   transition: all 0.8s ease 0.1s;
   &:hover{
     color: $rood;
+    text-decoration: none;
   }
 }
  /*nav on top*/

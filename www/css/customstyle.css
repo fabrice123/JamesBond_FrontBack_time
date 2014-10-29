@@ -24,7 +24,7 @@
     .navItemBond a div {
       background: transparent;
       width: 100px;
-      height: 30px;
+      height: 1.3em;
       margin-left: 2px; }
 
 .navItemGirls {
@@ -52,7 +52,7 @@
     .navItemGirls a div {
       background: transparent;
       width: 160px;
-      height: 30px;
+      height: 1.3em;
       margin-left: 2px; }
 
 .navItemCars {
@@ -80,7 +80,7 @@
     .navItemCars a div {
       background: transparent;
       width: 80px;
-      height: 30px;
+      height: 1.3em;
       margin-left: 5px; }
 
 .navItemMap {
@@ -106,7 +106,7 @@
     letter-spacing: -2px;
     text-decoration: none; }
     .navItemMap a div {
-      background: #b10a0a;
+      background: transparent;
       width: 60px;
       height: 1.3em;
       margin-left: 2px; }
@@ -165,17 +165,19 @@
     font-family: franchise;
     font-size: 5em;
     margin-left: -300px;
-    margin-top: 25px; }
+    margin-top: 25px;
+    text-shadow: 2px -2px 4px rgba(28, 28, 28, 0.45); }
   .bondNames .bondName {
     font-family: franchise;
     font-size: 5em;
     margin-left: 370px;
-    margin-top: -30px; }
+    margin-top: -30px;
+    text-shadow: 2px -2px 4px rgba(28, 28, 28, 0.45); }
   .bondNames #leftScroll {
-    margin-top: -47px;
+    margin-top: -140px;
     margin-left: 80px; }
   .bondNames #rightScroll {
-    margin-top: -47px;
+    margin-top: -140px;
     margin-left: 550px; }
 
 .dotWie {
@@ -205,7 +207,8 @@
   font-size: 15px;
   transition: all 0.8s ease 0.1s; }
   .wie:hover {
-    color: #b10a0a; }
+    color: #b10a0a;
+    text-decoration: none; }
 
 .dotPics {
   background: none repeat scroll 0 0 #3c3c3c;
@@ -234,7 +237,8 @@
   font-size: 15px;
   transition: all 0.8s ease 0.1s; }
   .pics:hover {
-    color: #b10a0a; }
+    color: #b10a0a;
+    text-decoration: none; }
 
 .dotFilms {
   background: none repeat scroll 0 0 #3c3c3c;
@@ -263,7 +267,8 @@
   font-size: 15px;
   transition: all 0.8s ease 0.1s; }
   .films:hover {
-    color: #b10a0a; }
+    color: #b10a0a;
+    text-decoration: none; }
 
 /*nav on top*/
 .bar.bar-stable {
