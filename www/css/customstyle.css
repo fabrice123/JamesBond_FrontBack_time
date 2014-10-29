@@ -1,3 +1,4 @@
+/*      NAVIGATIE ITEMS    */
 .navItemBond {
   text-align: center;
   padding: 0px;
@@ -105,21 +106,28 @@
     letter-spacing: -2px;
     text-decoration: none; }
     .navItemMap a div {
-      background: transparent;
+      background: #b10a0a;
       width: 60px;
       height: 30px;
       margin-left: 2px; }
 
+/*      NAVIGATIE ITEMS HOVER    */
 .navItemBond a div:hover, .navItemGirls a div:hover, .navItemCars a div:hover, .navItemMap a div:hover {
   border-bottom: 2px solid transparent;
   animation: underlineNav 2s;
+  -o-animation: underlineNav 2s;
   -webkit-animation: underlineNav 2s; }
 
 .navItemMap:hover, .navItemGirls:hover, .navItemBond:hover, .navItemCars:hover {
   animation: scaleNav 2s;
+  -o-animation: scaleNav 2s;
   -webkit-animation: scaleNav 2s; }
 
+/*      NAVIGATIE ITEMS KEYFRAMES    */
 @-webkit-keyframes underlineNav {
+  100% {
+    border-bottom: 2px solid #b10a0a; } }
+@-o-keyframes underlineNav {
   100% {
     border-bottom: 2px solid #b10a0a; } }
 @keyframes underlineNav {
@@ -128,15 +136,19 @@
 @-webkit-keyframes scaleNav {
   from {
     background-size: 110%; }
-
+  to {
+    background-size: 120%; } }
+@-o-keyframes scaleNav {
+  from {
+    background-size: 110%; }
   to {
     background-size: 120%; } }
 @keyframes scaleNav {
   from {
     background-size: 110%; }
-
   to {
     background-size: 120%; } }
+/*      SCHERM 1 (BONDS)    */
 .bonds {
   text-align: center;
   background-color: #faf2f2; }
@@ -166,40 +178,98 @@
     margin-top: -47px;
     margin-left: 550px; }
 
-.dot {
+.dotWie {
   background: none repeat scroll 0 0 #3c3c3c;
   border-radius: 9px;
   box-shadow: 0 0 0 3px white;
   height: 18px;
-  margin: 300px;
+  margin: 470px -400px;
   position: absolute;
   transition: all 0.8s ease 0.1s;
   width: 18px;
   display: inline-block; }
-  .dot:hover {
+  .dotWie:hover {
     width: 10px;
     height: 10px;
-    margin: 305px;
+    margin: 475px -400px;
     background: none repeat scroll 0 0 #b10a0a;
     box-shadow: 0 0 0 10px white; }
 
-.address {
+.wie {
   position: absolute;
-  margin-top: 265px;
-  margin-left: 293px;
+  margin: 440px -425px;
   background-color: transparent;
   color: black;
   font-family: Gulim;
   text-decoration: none;
   font-size: 15px;
   transition: all 0.8s ease 0.1s; }
-  .address:hover {
+  .wie:hover {
+    color: #b10a0a; }
+
+.dotPics {
+  background: none repeat scroll 0 0 #3c3c3c;
+  border-radius: 9px;
+  box-shadow: 0 0 0 3px white;
+  height: 18px;
+  margin: 100px -500px;
+  position: absolute;
+  transition: all 0.8s ease 0.1s;
+  width: 18px;
+  display: inline-block; }
+  .dotPics:hover {
+    width: 10px;
+    height: 10px;
+    margin: 105px 0 0 -500px;
+    background: none repeat scroll 0 0 #b10a0a;
+    box-shadow: 0 0 0 10px white; }
+
+.pics {
+  position: absolute;
+  margin: 70px 0 0 -520px;
+  background-color: transparent;
+  color: black;
+  font-family: Gulim;
+  text-decoration: none;
+  font-size: 15px;
+  transition: all 0.8s ease 0.1s; }
+  .pics:hover {
+    color: #b10a0a; }
+
+.dotFilms {
+  background: none repeat scroll 0 0 #3c3c3c;
+  border-radius: 9px;
+  box-shadow: 0 0 0 3px white;
+  height: 18px;
+  margin: 100px;
+  position: absolute;
+  transition: all 0.8s ease 0.1s;
+  width: 18px;
+  display: inline-block; }
+  .dotFilms:hover {
+    width: 10px;
+    height: 10px;
+    margin: 105px;
+    background: none repeat scroll 0 0 #b10a0a;
+    box-shadow: 0 0 0 10px white; }
+
+.films {
+  position: absolute;
+  margin: 70px 0 0 86px;
+  background-color: transparent;
+  color: black;
+  font-family: Gulim;
+  text-decoration: none;
+  font-size: 15px;
+  transition: all 0.8s ease 0.1s; }
+  .films:hover {
     color: #b10a0a; }
 
 /*nav on top*/
 .bar.bar-stable {
   background-color: #131211;
   -webkit-box-shadow: 0 5px 20px -5px #131211;
+  -o-box-shadow: 0 5px 20px -5px #131211;
   box-shadow: 0 5px 20px -5px #131211;
   border-color: #131211;
   background-color: #131211; }
@@ -217,6 +287,7 @@
 .menu {
   background-color: #131211;
   opacity: .9;
+  -o-box-shadow: 0 5px 20px -5px #131211;
   -webkit-box-shadow: 5px 0px 20px -5px #131211;
   box-shadow: 5px 0px 20px -5px #131211; }
 
@@ -225,3 +296,5 @@
   .bar.bar-stable .button {
     color: #faf2f2;
     display: block; } }
+
+/*# sourceMappingURL=customstyle.css.map */
