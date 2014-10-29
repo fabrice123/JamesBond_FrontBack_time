@@ -363,8 +363,7 @@ width: 233px;
 #volume{
   display: block;
   color: $achtergrond;
-  position: absolute;
-  left: 95%;
+
 }
 
 /*mediaquery vanaf 1200px */
@@ -373,9 +372,7 @@ width: 233px;
 
     left:38%;
   }
-  #volume{
-    left: 90%;
-  }
+
 }
 
 

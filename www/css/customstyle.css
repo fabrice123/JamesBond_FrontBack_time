@@ -298,17 +298,12 @@
 
 #volume {
   display: block;
-  color: #faf2f2;
-  position: absolute;
-  left: 95%; }
+  color: #faf2f2; }
 
 /*mediaquery vanaf 1200px */
 @media screen and (max-width: 1200px) {
   #logo {
-    left: 38%; }
-
-  #volume {
-    left: 90%; } }
+    left: 38%; } }
 /*mediaquery vanaf 768px */
 @media screen and (max-width: 768px) {
   .bar.bar-stable .button {
