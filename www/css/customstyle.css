@@ -108,7 +108,7 @@
     .navItemMap a div {
       background: #b10a0a;
       width: 60px;
-      height: 30px;
+      height: 1.3em;
       margin-left: 2px; }
 
 /*      NAVIGATIE ITEMS HOVER    */
@@ -281,7 +281,7 @@
   width: 233px;
   height: 34px;
   position: absolute;
-  left: 724px; }
+  left: 43%; }
 
 /*side-menu*/
 .menu {
@@ -291,6 +291,19 @@
   -webkit-box-shadow: 5px 0px 20px -5px #131211;
   box-shadow: 5px 0px 20px -5px #131211; }
 
+#volume {
+  display: block;
+  color: #faf2f2;
+  position: absolute;
+  left: 95%; }
+
+/*mediaquery vanaf 1200px */
+@media screen and (max-width: 1200px) {
+  #logo {
+    left: 38%; }
+
+  #volume {
+    left: 90%; } }
 /*mediaquery vanaf 768px */
 @media screen and (max-width: 768px) {
   .bar.bar-stable .button {
