@@ -160,3 +160,32 @@
   transition: all 0.8s ease 0.1s; }
   .address:hover {
     color: #b10a0a; }
+
+/*nav on top*/
+.bar.bar-stable {
+  background-color: #131211;
+  -webkit-box-shadow: 0 5px 20px -5px #131211;
+  box-shadow: 0 5px 20px -5px #131211;
+  border-color: #131211; }
+  .bar.bar-stable .button {
+    color: transparent;
+    display: none; }
+
+#logo {
+  width: 233px;
+  height: 34px;
+  position: absolute;
+  left: 724px; }
+
+/*side-menu*/
+.menu {
+  background-color: #131211;
+  opacity: .9;
+  -webkit-box-shadow: 5px 0px 20px -5px #131211;
+  box-shadow: 5px 0px 20px -5px #131211; }
+
+/*mediaquery vanaf 768px */
+@media screen and (max-width: 768px) {
+  .bar.bar-stable .button {
+    color: #faf2f2;
+    display: block; } }

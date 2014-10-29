@@ -1,5 +1,6 @@
 $rood : #b10a0a;
 $achtergrond: #faf2f2;
+$jbblack:#131211;
 
 .navItemBond{
   text-align: center;
@@ -122,10 +123,13 @@ $achtergrond: #faf2f2;
 .bonds{
   text-align: center;
   background-color: $achtergrond;
+
+
 }
 .bondImage{
   height: 93vh;
   z-index: -1;
+
 }
 .bondNames{
   position: absolute;
@@ -186,3 +190,45 @@ $achtergrond: #faf2f2;
     color: $rood;
   }
 }
+ /*nav on top*/
+.bar.bar-stable
+{
+  background-color: $jbblack;
+  -webkit-box-shadow: 0 5px 20px -5px $jbblack;
+  box-shadow: 0 5px 20px -5px $jbblack;
+  border-color: $jbblack;
+   .button
+   {
+     color: transparent;
+     display: none;
+   }
+}
+#logo{
+width: 233px;
+  height: 34px;
+  position: absolute;
+  left:724px;
+}
+/*side-menu*/
+.menu {
+  background-color: $jbblack;
+  opacity: .9;
+  -webkit-box-shadow: 5px 0px 20px -5px #131211;
+  box-shadow: 5px 0px 20px -5px #131211;
+
+
+}
+
+/*mediaquery vanaf 768px */
+@media screen and (max-width: 768px) {
+  .bar.bar-stable .button
+  {
+
+    color: $achtergrond;
+    display: block;
+
+
+  }
+}
+
+
