@@ -2,7 +2,8 @@ angular.module('starter.controllers', [])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
        document.getElementById("jbaudio").load();
-        document.getElementById("jbaudio").play();
+        document.getElementById("jbaudio").pause();
+        //document.getElementById("jbaudio").play();
         $scope.volumOnorOff=function() {
             var getvolume = document.getElementById("volume");
 
