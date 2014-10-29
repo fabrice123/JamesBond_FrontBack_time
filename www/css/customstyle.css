@@ -128,11 +128,13 @@
 @-webkit-keyframes scaleNav {
   from {
     background-size: 110%; }
+
   to {
     background-size: 120%; } }
 @keyframes scaleNav {
   from {
     background-size: 110%; }
+
   to {
     background-size: 120%; } }
 .bonds {
@@ -194,13 +196,13 @@
   .address:hover {
     color: #b10a0a; }
 
-<<<<<<< HEAD
 /*nav on top*/
 .bar.bar-stable {
   background-color: #131211;
   -webkit-box-shadow: 0 5px 20px -5px #131211;
   box-shadow: 0 5px 20px -5px #131211;
-  border-color: #131211; }
+  border-color: #131211;
+  background-color: #131211; }
   .bar.bar-stable .button {
     color: transparent;
     display: none; }
@@ -223,6 +225,3 @@
   .bar.bar-stable .button {
     color: #faf2f2;
     display: block; } }
-=======
-/*# sourceMappingURL=customstyle.css.map */
->>>>>>> origin/master
