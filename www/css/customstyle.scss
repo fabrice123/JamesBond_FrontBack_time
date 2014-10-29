@@ -130,7 +130,7 @@ $jbblack:#131211;
     div{
       background: transparent;
       width: 60px;
-      height: 30px;
+      height: 1.3em;
       margin-left: 2px;
     }
   }
@@ -260,7 +260,7 @@ $jbblack:#131211;
 width: 233px;
   height: 34px;
   position: absolute;
-  left:724px;
+  left:43%;
 }
 /*side-menu*/
 .menu {
@@ -271,6 +271,25 @@ width: 233px;
 
 
 }
+
+#volume{
+  display: block;
+  color: $achtergrond;
+  position: absolute;
+  left: 95%;
+}
+
+/*mediaquery vanaf 1200px */
+@media screen and (max-width: 1200px) {
+  #logo{
+
+    left:38%;
+  }
+  #volume{
+    left: 90%;
+  }
+}
+
 
 /*mediaquery vanaf 768px */
 @media screen and (max-width: 768px) {
