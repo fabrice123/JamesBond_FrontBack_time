@@ -136,16 +136,19 @@
 @-webkit-keyframes scaleNav {
   from {
     background-size: 110%; }
+
   to {
     background-size: 120%; } }
 @-o-keyframes scaleNav {
   from {
     background-size: 110%; }
+
   to {
     background-size: 120%; } }
 @keyframes scaleNav {
   from {
     background-size: 110%; }
+
   to {
     background-size: 120%; } }
 /*      SCHERM 1 (BONDS)    */
@@ -215,7 +218,7 @@
   border-radius: 9px;
   box-shadow: 0 0 0 3px white;
   height: 18px;
-  margin: 100px -500px;
+  margin: 100px 31em;
   position: absolute;
   transition: all 0.8s ease 0.1s;
   width: 18px;
@@ -309,5 +312,5 @@
   .bar.bar-stable .button {
     color: #faf2f2;
     display: block; } }
-
-/*# sourceMappingURL=customstyle.css.map */
+/*375*/
+/*950*/

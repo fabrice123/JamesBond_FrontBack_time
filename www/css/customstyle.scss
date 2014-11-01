@@ -265,7 +265,7 @@ $jbblack:#131211;
   border-radius: 9px;
   box-shadow: 0 0 0 3px rgba(255, 255, 255, 1);
   height: 18px;
-  margin: 100px -500px;
+  margin: 100px 31em;
   position: absolute;
   transition: all 0.8s ease 0.1s;
   width: 18px;
@@ -387,5 +387,11 @@ width: 233px;
 
   }
 }
+/*375*/
+@media screen and (max-width: 375px) {
+}
 
+/*950*/
+@media screen and (max-width: 950px) {
+}
 
