@@ -136,19 +136,16 @@
 @-webkit-keyframes scaleNav {
   from {
     background-size: 110%; }
-
   to {
     background-size: 120%; } }
 @-o-keyframes scaleNav {
   from {
     background-size: 110%; }
-
   to {
     background-size: 120%; } }
 @keyframes scaleNav {
   from {
     background-size: 110%; }
-
   to {
     background-size: 120%; } }
 /*      SCHERM 1 (BONDS)    */
@@ -188,7 +185,7 @@
   border-radius: 9px;
   box-shadow: 0 0 0 3px white;
   height: 18px;
-  margin: 470px -400px;
+  margin: 33.5em -28.5em;
   position: absolute;
   transition: all 0.8s ease 0.1s;
   width: 18px;
@@ -196,13 +193,13 @@
   .dotWie:hover {
     width: 10px;
     height: 10px;
-    margin: 475px -400px;
+    margin: 33.7em -28em;
     background: none repeat scroll 0 0 #b10a0a;
     box-shadow: 0 0 0 10px white; }
 
 .wie {
   position: absolute;
-  margin: 440px -425px;
+  margin: 29em -28.5em;
   background-color: transparent;
   color: black;
   font-family: Gulim;
@@ -218,7 +215,7 @@
   border-radius: 9px;
   box-shadow: 0 0 0 3px white;
   height: 18px;
-  margin: 100px 31em;
+  margin: 7em -36em;
   position: absolute;
   transition: all 0.8s ease 0.1s;
   width: 18px;
@@ -226,13 +223,13 @@
   .dotPics:hover {
     width: 10px;
     height: 10px;
-    margin: 105px 0 0 -500px;
+    margin: 7.5em -35.7em;
     background: none repeat scroll 0 0 #b10a0a;
     box-shadow: 0 0 0 10px white; }
 
 .pics {
   position: absolute;
-  margin: 70px 0 0 -520px;
+  margin: 4.3em -35em;
   background-color: transparent;
   color: black;
   font-family: Gulim;
@@ -248,7 +245,7 @@
   border-radius: 9px;
   box-shadow: 0 0 0 3px white;
   height: 18px;
-  margin: 100px;
+  margin: 7em;
   position: absolute;
   transition: all 0.8s ease 0.1s;
   width: 18px;
@@ -256,13 +253,13 @@
   .dotFilms:hover {
     width: 10px;
     height: 10px;
-    margin: 105px;
+    margin: 7.5em;
     background: none repeat scroll 0 0 #b10a0a;
     box-shadow: 0 0 0 10px white; }
 
 .films {
   position: absolute;
-  margin: 70px 0 0 86px;
+  margin: 4.3em 5.5em;
   background-color: transparent;
   color: black;
   font-family: Gulim;
@@ -303,14 +300,81 @@
   display: block;
   color: #faf2f2; }
 
-/*mediaquery vanaf 1200px */
-@media screen and (max-width: 1200px) {
-  #logo {
-    left: 38%; } }
 /*mediaquery vanaf 768px */
 @media screen and (max-width: 768px) {
   .bar.bar-stable .button {
     color: #faf2f2;
-    display: block; } }
-/*375*/
+    display: block; }
+
+  .bondFirstname {
+    display: none; }
+
+  .bondName {
+    display: none; }
+
+  .scrollBonds {
+    margin-top: 17em;
+    margin-left: -7em; }
+
+  .dotWie {
+    margin: 33.5em -22em; }
+    .dotWie:hover {
+      margin: 33.7em -21.5em; }
+
+  .wie {
+    margin: 29em -23em; }
+
+  .dotPics {
+    margin: 7em -23em; }
+    .dotPics:hover {
+      margin: 7.5em -22.7em; }
+
+  .pics {
+    margin: 4.3em -22.7em; }
+
+  .dotFilms {
+    margin: 7em -2em; }
+    .dotFilms:hover {
+      margin: 7.2em -2em; }
+
+  .films {
+    margin: 4.3em -2em; } }
+/*600*/
+@media screen and (max-width: 600px) {
+  .scrollBonds {
+    width: 80%;
+    margin-left: -13em; }
+
+  .dotWie {
+    margin: 30em -2em; }
+    .dotWie:hover {
+      margin: 30.5em -1.5em; }
+
+  .wie {
+    margin: 25.5em -4.5em;
+    color: #b10a0a; }
+
+  .dotPics {
+    margin: 7em -20em; }
+    .dotPics:hover {
+      margin: 7.5em -19.7em; }
+
+  .pics {
+    margin: 4.3em -19.5em;
+    color: #b10a0a; }
+
+  .dotFilms {
+    margin: 7em -2em; }
+    .dotFilms:hover {
+      margin: 7.2em -2em; }
+
+  .films {
+    margin: 4.3em -3em;
+    color: #b10a0a; } }
 /*950*/
+/*mediaquery vanaf 1200px */
+@media screen and (max-width: 1200px) {
+  #logo {
+    left: 38%; } }
+
+/*# sourceMappingURL=customstyle.css.map */

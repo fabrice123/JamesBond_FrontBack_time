@@ -153,12 +153,6 @@ angular.module('starter.controllers', [])
                     break;
             }
         }
-
-
-
-
-
-
     })
 
 
