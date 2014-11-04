@@ -1,6 +1,13 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+.controller('AppCtrl', function($scope, $ionicModal,$http,bondservice, $timeout) {
+
+        bondservice.getbonds().then(function(data){
+console.log(data);
+        });
+
+
+
        document.getElementById("jbaudio").load();
         document.getElementById("jbaudio").pause();
         //document.getElementById("jbaudio").play();
@@ -59,14 +66,14 @@ angular.module('starter.controllers', [])
 
     .controller('BondsCtrl', function($scope) {
         $scope.bonds = [
-            {id: 1},
-            {  id: 2 },
-            {  id: 3 },
-            { id: 4 },
-            {  id: 5 },
-            { id: 6 }
+            {"id": 0,"web":"http://googlewebcomponents.github.io/"},
+            {  "id": 1 },
+            {  "id": 2 },
+            { "id": 3 },
+            {  "id": 4 },
+            { "id": 5}
         ];
-
+        $scope.jbnimber=0;
         $scope.bonds[0].imagesrc=new Image();
         $scope.bonds[0].imagesrc.src='img/SeanConnery.png';
         $scope.bonds[1].imagesrc=new Image();
@@ -80,7 +87,7 @@ angular.module('starter.controllers', [])
         $scope.bonds[5].imagesrc=new Image();
         $scope.bonds[5].imagesrc.src='img/DanielCraig.png';
 
-        console.log($scope.bonds[0]);
+
 
         $scope.nextImage=function(element)
         {
@@ -93,6 +100,9 @@ angular.module('starter.controllers', [])
                 {
 
                     $scope.changeName(i);
+                    $scope.jbnimber=i+1;
+                    console.log($scope.jbnimber);
+                    console.log( $scope.bonds);
                     if(i === $scope.bonds.length-1){
                         document.getElementById(element).src = $scope.bonds[0].imagesrc.src;
                         break;
@@ -155,13 +165,13 @@ angular.module('starter.controllers', [])
         }
 
 
-
-
-
-
     })
 
-
+    .controller('SingleBondCtrl', function($scope, $stateParams) {
+        console.log("kk");
+        console.log($stateParams.bondId);
+        $scope.ide=$stateParams.bondId;
+    })
 .controller('PlaylistsCtrl', function($scope) {
   $scope.playlists = [
     { title: 'Reggae', id: 1 },
@@ -173,5 +183,4 @@ angular.module('starter.controllers', [])
   ];
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
-});
+

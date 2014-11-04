@@ -14,8 +14,9 @@
             <button id="leftScroll" class="button button-icon icon ion-chevron-left" ng-click="previousImage('mainBond')"></button>
             <button id="rightScroll" class="button button-icon icon ion-chevron-right" ng-click="nextImage('mainBond')"></button>
         </div>
-        <a class="wie" id="wie" href="http://www.google.be">Who am I?</a>
-        <a class="dotWie" id="dotWie" href="http://www.google.be"></a>
+
+        <a class="wie" id="wie" ng-href="#/app/bonds/whoami/{{jbnimber}}">Who am I?</a>
+        <a class="dotWie" id="dotWie" ng-href="#/app/bonds/whoami/{{jbnimber}}"></a>
 
         <a class="pics" id="pics" href="http://www.google.be">Pictures</a>
         <a class="dotPics" id="dotPics" href="http://www.google.be"></a>
