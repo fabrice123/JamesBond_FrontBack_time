@@ -136,16 +136,19 @@
 @-webkit-keyframes scaleNav {
   from {
     background-size: 110%; }
+
   to {
     background-size: 120%; } }
 @-o-keyframes scaleNav {
   from {
     background-size: 110%; }
+
   to {
     background-size: 120%; } }
 @keyframes scaleNav {
   from {
     background-size: 110%; }
+
   to {
     background-size: 120%; } }
 /*      SCHERM 1 (BONDS)    */
@@ -257,6 +260,12 @@
     background: none repeat scroll 0 0 #b10a0a;
     box-shadow: 0 0 0 10px white; }
 
+#rowbonds {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%; }
+
 .films {
   position: absolute;
   margin: 4.3em 5.5em;
@@ -277,10 +286,12 @@
   -o-box-shadow: 0 5px 20px -5px #131211;
   box-shadow: 0 5px 20px -5px #131211;
   border-color: #131211;
-  background-color: #131211; }
-  .bar.bar-stable .button {
+  background-color: #131211;
+  /*.button
+  {
     color: transparent;
-    display: none; }
+    display: none;
+  }*/ }
 
 #logo {
   width: 233px;
@@ -432,5 +443,3 @@
   .films {
     margin: 4.3em 0em;
     color: #b10a0a; } }
-
-/*# sourceMappingURL=customstyle.css.map */
