@@ -58,8 +58,25 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.service'])
           controller: 'SingleBondCtrl'
         }
       }
-    });
+    })
+
+    .state('girls', {
+        url: "/girls",
+        abstract: true,
+        templateUrl: "templates/menuGirl.html",
+        controller: 'GirlsCtrl'
+    })
+
+      .state('girls.bondgirls', {
+          url: "/bondgirls",
+          views: {
+              'menuContent' :{
+                  templateUrl: "templates/girls.html",
+                  controller: 'BondgirlsCtrl'
+              }
+          }
+      });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/bonds');
+  $urlRouterProvider.otherwise('/');
 });
 

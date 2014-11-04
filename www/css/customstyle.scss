@@ -70,6 +70,35 @@ $jbblack:#131211;
   }
 }
 
+.navGirl1{
+  background-image: url('../img/Bondgirls/VesperLynd.jpg');
+  padding-top: 90px;
+  background-size: 110%;
+
+  a{
+    background-color: transparent;
+    position: absolute;
+    top: 0px;
+    left: -45px;
+    padding-left: 100px;
+    padding-right: 120px;
+    padding-bottom: 36px;
+    padding-top: 37px;
+    color: white;
+    text-decoration: none;
+    font-family: Gulim;
+    font-size:30px;
+    letter-spacing: -2px;
+
+    div{
+      background: transparent;
+      width: 182px;
+      height: 1.3em;
+      margin-left: 2px;
+    }
+  }
+}
+
 .navItemCars{
   text-align: center;
   padding: 0px;
@@ -137,14 +166,14 @@ $jbblack:#131211;
 }
 
 /*      NAVIGATIE ITEMS HOVER    */
-.navItemBond a div:hover, .navItemGirls a div:hover, .navItemCars a div:hover, .navItemMap a div:hover{
+.navItemBond a div:hover, .navItemGirls a div:hover, .navItemCars a div:hover, .navItemMap a div:hover, .navGirl1 a div:hover{
   border-bottom: 2px solid transparent;
   animation: underlineNav 2s;
   -o-animation: underlineNav 2s ;
   -webkit-animation: underlineNav 2s ;
 }
 
-.navItemMap:hover, .navItemGirls:hover,.navItemBond:hover,.navItemCars:hover{
+.navItemMap:hover, .navItemGirls:hover,.navItemBond:hover,.navItemCars:hover, .navGirl1:hover{
   animation: scaleNav 2s;
   -o-animation: scaleNav 2s;
   -webkit-animation: scaleNav 2s;
@@ -185,11 +214,9 @@ $jbblack:#131211;
 }
 
 /*      SCHERM 1 (BONDS)    */
-.bonds{
+.bonds, .girls{
   text-align: center;
   background-color: $achtergrond;
-
-
 }
 //Image en naam
 .bondImage{
@@ -337,11 +364,13 @@ $jbblack:#131211;
   box-shadow: 0 5px 20px -5px $jbblack;
   border-color: $jbblack;
   background-color: $jbblack;
+
    .button
    {
      color: transparent;
      display: none;
    }
+
 }
 #logo{
 width: 233px;
@@ -366,7 +395,10 @@ width: 233px;
 
 }
 
-/* ----- MEDIAQUERIES------ */
+/*      SCHERM 2 (BONDGIRLS)    */
+
+
+/*      MEDIAQUERIES    */
 
 /*mediaquery vanaf 1200px */
 @media screen and (max-width: 1200px) {

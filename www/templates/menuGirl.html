@@ -1,0 +1,32 @@
+<ion-side-menus>
+
+    <ion-pane ion-side-menu-content>
+        <ion-nav-bar class="bar-stable nav-title-slide-ios7">
+            <ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i> Back</ion-nav-back-button>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+    </ion-pane>
+
+    <ion-side-menu side="left" expose-aside-when="large">
+        <!--
+      <header class="bar bar-header bar-stable">
+        <h1 class="title">Left</h1>
+      </header>
+      -->
+        <button id="volume" class="button button-icon icon ion-volume-high" ng-click="volumOnorOff()"></button>
+        <audio id="jbaudio">
+            <source src="music/James Bond 007 Theme Tune (original).ogg" type="audio/ogg">
+            <source src="music/James Bond 007 Theme Tune (original).mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <ion-content class="has-header">
+            <ion-list>
+                <ion-item nav-clear menu-close class="navGirl1">
+                    <a href="#/girls/bondgirls">
+                        <div>VESPER LYND</div>
+                    </a>
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>
