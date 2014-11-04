@@ -340,6 +340,12 @@ $jbblack:#131211;
 
   }
 }
+#rowbonds{
+margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+}
 
 .films{
   position: absolute;
@@ -364,6 +370,7 @@ $jbblack:#131211;
   box-shadow: 0 5px 20px -5px $jbblack;
   border-color: $jbblack;
   background-color: $jbblack;
+<<<<<<< HEAD
 
    .button
    {
@@ -371,6 +378,13 @@ $jbblack:#131211;
      display: none;
    }
 
+=======
+   /*.button
+   {
+     color: transparent;
+     display: none;
+   }*/
+>>>>>>> 53fc0d60fe4c588ae65cda69c025c3959a05921d
 }
 #logo{
 width: 233px;

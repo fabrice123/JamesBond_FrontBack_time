@@ -1,10 +1,7 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal,$http,bondservice, $timeout) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
-        bondservice.getbonds().then(function(data){
-console.log(data);
-        });
 
 
 
@@ -32,7 +29,7 @@ console.log(data);
 
     .controller('BondsCtrl', function($scope) {
         $scope.bonds = [
-            {"id": 0,"web":"http://googlewebcomponents.github.io/"},
+            {"id": 0},
             {  "id": 1 },
             {  "id": 2 },
             { "id": 3 },
@@ -131,10 +128,95 @@ console.log(data);
         }
     })
 
-    .controller('SingleBondCtrl', function($scope, $stateParams) {
-        console.log("kk");
+    .controller('SingleBondCtrl', function($scope,$http,bondservice, $stateParams) {
+        console.log($stateParams);
         console.log($stateParams.bondId);
         $scope.ide=$stateParams.bondId;
+
+console.log("sdsdsd" + $scope.ide);
+        switch ($scope.ide)
+        {
+            case "0":
+                bondservice.getsinglebond(738).then(function(data){
+                    $scope.biografie          = data.biography;
+                    $scope.profileimage = data.profile_path;
+                    $scope.birthday=data.birthday;
+                    $scope.name=data.name;
+                    $scope.place_of_birth=data.place_of_birth;
+                    console.log( $scope.biografie);
+                    console.log( $scope.profileimage);
+
+                });
+                break;
+            case "1":
+                bondservice.getsinglebond(10167).then(function(data){
+                    $scope.biografie          = data.biography;
+                    $scope.profileimage = data.profile_path;
+                    $scope.birthday=data.birthday;
+                    $scope.name=data.name;
+                    $scope.place_of_birth=data.place_of_birth;
+                    console.log( data);
+                    console.log( $scope.profileimage);
+                });
+                break;
+            case "2":
+                bondservice.getsinglebond(10669).then(function(data){
+                    $scope.biografie          = data.biography;
+                    $scope.profileimage = data.profile_path;
+                    $scope.birthday=data.birthday;
+                    $scope.name=data.name;
+                    $scope.place_of_birth=data.place_of_birth;
+                    console.log( $scope.biografie);
+                    console.log( $scope.profileimage);
+                });
+                break;
+            case "3":
+                bondservice.getsinglebond(10222).then(function(data){
+                    $scope.biografie          = data.biography;
+                    $scope.profileimage = data.profile_path;
+                    $scope.birthday=data.birthday;
+                    $scope.name=data.name;
+                    $scope.place_of_birth=data.place_of_birth;
+
+                });
+                break;
+            case "4":
+                console.log("sd");
+                bondservice.getsinglebond(517).then(function(data){
+                    $scope.biografie          = data.biography;
+                    $scope.profileimage = data.profile_path;
+                    $scope.birthday=data.birthday;
+                    $scope.name=data.name;
+                    $scope.place_of_birth=data.place_of_birth;
+                });
+                break;
+            case "5":
+                bondservice.getsinglebond(8784).then(function(data){
+                    $scope.biografie          = data.biography;
+                    $scope.profileimage = data.profile_path;
+                    $scope.birthday=data.birthday;
+                    $scope.name=data.name;
+                    $scope.place_of_birth=data.place_of_birth;
+
+                });
+                break;
+            case "0":
+                bondservice.getsinglebond(738).then(function(data){
+                    $scope.biografie          = data.biography;
+                    $scope.profileimage = data.profile_path;
+                    $scope.birthday=data.birthday;
+                    $scope.name=data.name;
+                    $scope.place_of_birth=data.place_of_birth;
+                    console.log( $scope.biografie);
+                    console.log( $scope.profileimage);
+
+                });
+                break;
+        }
+
+
+
+
     })
 
     .controller('GirlsCtrl', function($scope, $stateParams) {
