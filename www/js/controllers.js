@@ -163,8 +163,11 @@ console.log(data);
                     break;
             }
         }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/master
     })
 
     .controller('SingleBondCtrl', function($scope, $stateParams) {
