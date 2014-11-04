@@ -310,12 +310,7 @@
   -o-box-shadow: 0 5px 20px -5px #131211;
   box-shadow: 0 5px 20px -5px #131211;
   border-color: #131211;
-  background-color: #131211;
-  /*.button
-  {
-    color: transparent;
-    display: none;
-  }*/ }
+  background-color: #131211; }
 
 #logo {
   width: 233px;

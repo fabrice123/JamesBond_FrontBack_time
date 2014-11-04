@@ -129,90 +129,166 @@ angular.module('starter.controllers', [])
     })
 
     .controller('SingleBondCtrl', function($scope,$http,bondservice, $stateParams) {
-        console.log($stateParams);
-        console.log($stateParams.bondId);
+
+        $scope.bonds=[];
+        var retrievedObject1,  retrievedObject2, retrievedObject3,retrievedObject4,retrievedObject5,retrievedObject6;
+
         $scope.ide=$stateParams.bondId;
 
-console.log("sdsdsd" + $scope.ide);
         switch ($scope.ide)
         {
             case "0":
-                bondservice.getsinglebond(738).then(function(data){
-                    $scope.biografie          = data.biography;
-                    $scope.profileimage = data.profile_path;
-                    $scope.birthday=data.birthday;
-                    $scope.name=data.name;
-                    $scope.place_of_birth=data.place_of_birth;
-                    console.log( $scope.biografie);
-                    console.log( $scope.profileimage);
+                retrievedObject1 = localStorage.getItem('bond1Storage');
+                if (typeof retrievedObject1 === 'undefined' || retrievedObject1 === null) {
 
-                });
+                    bondservice.getsinglebond(738).then(function (data) {
+
+                        $scope.bonds = data;
+                        $scope.bonds.biografie = $scope.bonds['biography'];
+                        $scope.bonds.profileimage = $scope.bonds['profile_path'];
+                        $scope.bonds.birthday = $scope.bonds['birthday'];
+                        $scope.bonds.name = $scope.bonds['name'];
+                        console.log( $scope.bonds.profileimage);
+                        console.log( $scope.networkIcon);
+                        $scope.bonds.place_of_birth = $scope.bonds['place_of_birth'];
+
+                        storage = localStorage.setItem('bond1Storage', JSON.stringify($scope.bonds));
+                    });
+                }
+                else {
+
+                    $scope.bonds = JSON.parse(retrievedObject1);
+                    console.log('retrievedObject: ', JSON.parse(retrievedObject1));
+                }
+
+
+                //undefined
                 break;
             case "1":
-                bondservice.getsinglebond(10167).then(function(data){
-                    $scope.biografie          = data.biography;
-                    $scope.profileimage = data.profile_path;
-                    $scope.birthday=data.birthday;
-                    $scope.name=data.name;
-                    $scope.place_of_birth=data.place_of_birth;
-                    console.log( data);
-                    console.log( $scope.profileimage);
-                });
+                retrievedObject2 = localStorage.getItem('bond2Storage');
+                if (typeof retrievedObject2 === 'undefined' || retrievedObject2 === null) {
+                    bondservice.getsinglebond(10167).then(function (data) {
+                        $scope.bonds = data;
+                        $scope.bonds.biografie = $scope.bonds['biography'];
+                        $scope.bonds.profileimage = $scope.bonds['profile_path'];
+                        $scope.bonds.birthday = $scope.bonds['birthday'];
+                        $scope.bonds.name = $scope.bonds['name'];
+                        $scope.bonds.place_of_birth = $scope.bonds['place_of_birth'];
+
+                        storage = localStorage.setItem('bond2Storage', JSON.stringify($scope.bonds));
+                    });
+                }
+                else {
+
+                    $scope.bonds = JSON.parse(retrievedObject2);
+                    console.log('retrievedObject: ', JSON.parse(retrievedObject2));
+                }
                 break;
             case "2":
-                bondservice.getsinglebond(10669).then(function(data){
-                    $scope.biografie          = data.biography;
-                    $scope.profileimage = data.profile_path;
-                    $scope.birthday=data.birthday;
-                    $scope.name=data.name;
-                    $scope.place_of_birth=data.place_of_birth;
-                    console.log( $scope.biografie);
-                    console.log( $scope.profileimage);
-                });
+                retrievedObject3 = localStorage.getItem('bond3Storage');
+                if (typeof retrievedObject3 === 'undefined' || retrievedObject3 === null) {
+                    bondservice.getsinglebond(10669).then(function (data) {
+                        $scope.bonds = data;
+                        $scope.bonds.biografie = $scope.bonds['biography'];
+                        $scope.bonds.profileimage = $scope.bonds['profile_path'];
+                        $scope.bonds.birthday = $scope.bonds['birthday'];
+                        $scope.bonds.name = $scope.bonds['name'];
+                        $scope.bonds.place_of_birth = $scope.bonds['place_of_birth'];
+                        console.log($scope.bonds);
+
+                        storage = localStorage.setItem('bond3Storage', JSON.stringify($scope.bonds));
+                    });
+                }
+                else {
+
+                    $scope.bonds = JSON.parse(retrievedObject3);
+                    console.log('retrievedObject: ', JSON.parse(retrievedObject3));
+                }
                 break;
             case "3":
-                bondservice.getsinglebond(10222).then(function(data){
-                    $scope.biografie          = data.biography;
-                    $scope.profileimage = data.profile_path;
-                    $scope.birthday=data.birthday;
-                    $scope.name=data.name;
-                    $scope.place_of_birth=data.place_of_birth;
+                retrievedObject4 = localStorage.getItem('bond4Storage');
+                if (typeof retrievedObject4 === 'undefined' || retrievedObject4 === null) {
+                    bondservice.getsinglebond(10222).then(function (data) {
+                        $scope.bonds = data;
+                        $scope.bonds.biografie = $scope.bonds['biography'];
+                        $scope.bonds.profileimage = $scope.bonds['profile_path'];
+                        $scope.bonds.birthday = $scope.bonds['birthday'];
+                        $scope.bonds.name = $scope.bonds['name'];
+                        $scope.bonds.place_of_birth = $scope.bonds['place_of_birth'];
 
-                });
+                        storage = localStorage.setItem('bond4Storage', JSON.stringify($scope.bonds));
+                    });
+                }
+                else {
+
+                    $scope.bonds = JSON.parse(retrievedObject4);
+                    console.log('retrievedObject: ', JSON.parse(retrievedObject4));
+                }
                 break;
             case "4":
-                console.log("sd");
-                bondservice.getsinglebond(517).then(function(data){
-                    $scope.biografie          = data.biography;
-                    $scope.profileimage = data.profile_path;
-                    $scope.birthday=data.birthday;
-                    $scope.name=data.name;
-                    $scope.place_of_birth=data.place_of_birth;
-                });
+                retrievedObject5 = localStorage.getItem('bond5Storage');
+                if (typeof retrievedObject5 === 'undefined' || retrievedObject5 === null) {
+                    console.log("sd");
+                    bondservice.getsinglebond(517).then(function (data) {
+                        $scope.bonds = data;
+                        $scope.bonds.biografie = $scope.bonds['biography'];
+                        $scope.bonds.profileimage = $scope.bonds['profile_path'];
+                        $scope.bonds.birthday = $scope.bonds['birthday'];
+                        $scope.bonds.name = $scope.bonds['name'];
+                        $scope.bonds.place_of_birth = $scope.bonds['place_of_birth'];
+
+                        storage = localStorage.setItem('bond5Storage', JSON.stringify($scope.bonds));
+                    });
+                }
+                else {
+
+                    $scope.bonds = JSON.parse(retrievedObject5);
+                    console.log('retrievedObject: ', JSON.parse(retrievedObject5));
+                }
                 break;
             case "5":
-                bondservice.getsinglebond(8784).then(function(data){
-                    $scope.biografie          = data.biography;
-                    $scope.profileimage = data.profile_path;
-                    $scope.birthday=data.birthday;
-                    $scope.name=data.name;
-                    $scope.place_of_birth=data.place_of_birth;
+                retrievedObject6 = localStorage.getItem('bond6Storage');
+                if (typeof retrievedObject6 === 'undefined' || retrievedObject6 === null) {
+                    bondservice.getsinglebond(8784).then(function (data) {
+                        $scope.bonds = data;
+                        $scope.bonds.biografie = $scope.bonds['biography'];
+                        $scope.bonds.profileimage = $scope.bonds['profile_path'];
+                        $scope.bonds.birthday = $scope.bonds['birthday'];
+                        $scope.bonds.name = $scope.bonds['name'];
+                        $scope.bonds.place_of_birth = $scope.bonds['place_of_birth'];
 
-                });
+                        storage = localStorage.setItem('bond6Storage', JSON.stringify($scope.bonds));
+                    });
+                }
+                else {
+
+                    $scope.bonds = JSON.parse(retrievedObject6);
+                    console.log('retrievedObject: ', JSON.parse(retrievedObject6));
+                }
                 break;
             case "0":
-                bondservice.getsinglebond(738).then(function(data){
-                    $scope.biografie          = data.biography;
-                    $scope.profileimage = data.profile_path;
-                    $scope.birthday=data.birthday;
-                    $scope.name=data.name;
-                    $scope.place_of_birth=data.place_of_birth;
-                    console.log( $scope.biografie);
-                    console.log( $scope.profileimage);
+                retrievedObject1 = localStorage.getItem('bond1Storage');
+                if (typeof retrievedObject1 === 'undefined' || retrievedObject1 === null) {
+                    bondservice.getsinglebond(738).then(function (data) {
+                        $scope.bonds = data;
+                        $scope.bonds.biografie = $scope.bonds['biography'];
+                        $scope.bonds.profileimage = $scope.bonds['profile_path'];
+                        $scope.bonds.birthday = $scope.bonds['birthday'];
+                        $scope.bonds.name = $scope.bonds['name'];
+                        $scope.bonds.place_of_birth = $scope.bonds['place_of_birth'];
 
-                });
+                        storage = localStorage.setItem('bond1Storage', JSON.stringify($scope.bonds));
+                    });
+                }
+                else {
+
+                        $scope.bonds = JSON.parse(retrievedObject1);
+                        console.log('retrievedObject: ', JSON.parse(retrievedObject1));
+                    }
                 break;
         }
+
+
 
 
 

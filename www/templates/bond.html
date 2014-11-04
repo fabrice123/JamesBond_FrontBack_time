@@ -6,33 +6,36 @@
     </ion-nav-buttons>
 
 
-    <div class="row" id="rowbonds">
+
+
+    <div class="row " id="rowbonds">
 
 
                 <div class="card">
                     <div class="item item-image col">
-                <img src="http://image.tmdb.org/t/p/w500/{{profileimage}}">
+
+                <img ng-src="http://image.tmdb.org/t/p/w500/{{bonds.profileimage}}">
                     </div>
                 </div>
-                        <div class="card col col-75">
+                        <div class="card col col-75 ">
 
                             <div class="item">
 
-                                <h2>{{name}}</h2>
+                                <h2>{{bonds.name}}</h2>
 
-                                <p>{{birthday}}</p>
-                                <p>{{place_of_birth}}</p>
+                                <p>{{bonds.birthday}}</p>
+                                <p>{{bonds.place_of_birth}}</p>
                             </div>
 
                             <div class="item item-body">
 
                                 <p>
-                                    {{ biografie  }}
+                                    {{ bonds.biografie  }}
                                 </p>
-                                <p>
+                               <!-- <p>
                                     <a href="#" class="subdued">1 Like</a>
                                     <a href="#" class="subdued">5 Comments</a>
-                                </p>
+                                </p>-->
                             </div>
 
                             <div class="item tabs tabs-secondary tabs-icon-left">
