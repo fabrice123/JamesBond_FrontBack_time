@@ -164,7 +164,7 @@
   .bondNames .bondFirstname {
     font-family: franchise;
     font-size: 5em;
-    margin-left: -300px;
+    margin-left: -350px;
     margin-top: 25px;
     text-shadow: 2px -2px 4px rgba(28, 28, 28, 0.45); }
   .bondNames .bondName {
@@ -175,7 +175,7 @@
     text-shadow: 2px -2px 4px rgba(28, 28, 28, 0.45); }
   .bondNames #leftScroll {
     margin-top: -140px;
-    margin-left: 80px; }
+    margin-left: 30px; }
   .bondNames #rightScroll {
     margin-top: -140px;
     margin-left: 550px; }
@@ -286,7 +286,7 @@
   width: 233px;
   height: 34px;
   position: absolute;
-  left: 43%; }
+  left: 41%; }
 
 /*side-menu*/
 .menu {
@@ -300,11 +300,31 @@
   display: block;
   color: #faf2f2; }
 
-/*mediaquery vanaf 768px */
-@media screen and (max-width: 768px) {
-  .bar.bar-stable .button {
-    color: #faf2f2;
-    display: block; }
+/* ----- MEDIAQUERIES------ */
+/*mediaquery vanaf 1200px */
+@media screen and (max-width: 1200px) {
+  #logo {
+    left: 37%; }
+
+  .dotWie {
+    margin: 33.5em -23em; }
+    .dotWie:hover {
+      margin: 33.7em -22.5em; }
+
+  .wie {
+    margin: 29em -23em; }
+
+  .dotPics {
+    margin: 7em -25em; }
+    .dotPics:hover {
+      margin: 7.5em -24.7em; }
+
+  .pics {
+    margin: 4.3em -24.5em; } }
+/*950*/
+@media screen and (max-width: 950px) {
+  #logo {
+    left: 32%; }
 
   .bondFirstname {
     display: none; }
@@ -314,7 +334,45 @@
 
   .scrollBonds {
     margin-top: 17em;
-    margin-left: -7em; }
+    margin-left: -12em;
+    width: 100%; }
+
+  .dotFilms {
+    margin: 7em 1em; }
+    .dotFilms:hover {
+      margin: 7.2em 1em; }
+
+  .films {
+    margin: 4.3em 0em; }
+
+  .dotPics {
+    margin: 7em -21em; }
+    .dotPics:hover {
+      margin: 7.5em -20.7em; }
+
+  .pics {
+    margin: 4.3em -20.7em; }
+
+  .dotWie {
+    margin: 33.5em -21em; }
+    .dotWie:hover {
+      margin: 33.7em -20.5em; }
+
+  .wie {
+    margin: 29em -22em; } }
+/*mediaquery vanaf 768px */
+@media screen and (max-width: 768px) {
+  #logo {
+    left: 33%; }
+
+  .bar.bar-stable .button {
+    color: #faf2f2;
+    display: block; }
+
+  .scrollBonds {
+    margin-top: 17em;
+    margin-left: -3em;
+    width: 100%; }
 
   .dotWie {
     margin: 33.5em -22em; }
@@ -333,25 +391,28 @@
     margin: 4.3em -22.7em; }
 
   .dotFilms {
-    margin: 7em -2em; }
+    margin: 7em 4em; }
     .dotFilms:hover {
-      margin: 7.2em -2em; }
+      margin: 7.2em 4em; }
 
   .films {
-    margin: 4.3em -2em; } }
-/*600*/
-@media screen and (max-width: 600px) {
+    margin: 4.3em 3em; } }
+/*644*/
+@media screen and (max-width: 644px) {
+  #logo {
+    left: 26%; }
+
   .scrollBonds {
-    width: 80%;
+    width: 100%;
     margin-left: -13em; }
 
   .dotWie {
-    margin: 30em -2em; }
+    margin: 30em 0em; }
     .dotWie:hover {
-      margin: 30.5em -1.5em; }
+      margin: 30.5em 0.5em; }
 
   .wie {
-    margin: 25.5em -4.5em;
+    margin: 25.5em -2.5em;
     color: #b10a0a; }
 
   .dotPics {
@@ -364,17 +425,12 @@
     color: #b10a0a; }
 
   .dotFilms {
-    margin: 7em -2em; }
+    margin: 7em 1em; }
     .dotFilms:hover {
-      margin: 7.2em -2em; }
+      margin: 7.2em 1em; }
 
   .films {
-    margin: 4.3em -3em;
+    margin: 4.3em 0em;
     color: #b10a0a; } }
-/*950*/
-/*mediaquery vanaf 1200px */
-@media screen and (max-width: 1200px) {
-  #logo {
-    left: 38%; } }
 
 /*# sourceMappingURL=customstyle.css.map */
