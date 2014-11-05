@@ -1,8 +1,7 @@
 <ion-view>
     <ion-nav-buttons side="left">
         <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
-
-        <img id="logo" class="Responsive image"  src="img/logo_james_bond_site_logo_white.png"/>
+<img id="logo" class="Responsive image"  src="img/logo_james_bond_site_logo_white.png"/>
     </ion-nav-buttons>
 
 
@@ -11,13 +10,16 @@
     <div class="row " id="rowbonds">
 
 
-                <div class="card">
-                    <div class="item item-image col">
+                <div class="card" style="width: 2200px;">
+                    <div class="item item-image">
 
                 <img ng-src="http://image.tmdb.org/t/p/w500/{{bonds.profileimage}}">
                     </div>
                 </div>
-                        <div class="card col col-75 ">
+
+        <ion-scroll zooming="false" direction="y" style="width: auto; height: 900px" >
+
+                        <div class="card ">
 
                             <div class="item">
 
@@ -54,5 +56,7 @@
                             </div>
 
                         </div>
+        </ion-scroll>
     </div>
+
     </ion-view>

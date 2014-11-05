@@ -60,6 +60,26 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.service'])
       }
     })
 
+      .state('app.pictures', {
+          url: "/bonds/pics/:bondId",
+          views: {
+              'menuContent' :{
+                  templateUrl: "templates/bondpictures.html",
+                  controller: 'SingleBondPictureCtrl'
+              }
+          }
+      })
+
+      .state('app.moviesbond', {
+          url: "/bonds/movies/:bondId",
+          views: {
+              'menuContent' :{
+                  templateUrl: "templates/bondmovies.html",
+                  controller: 'SingleBondMovieCtrl'
+              }
+          }
+      })
+
     .state('girls', {
         url: "/girls",
         abstract: true,

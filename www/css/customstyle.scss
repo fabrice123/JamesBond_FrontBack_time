@@ -390,6 +390,15 @@ width: 233px;
 
 
 }
+#girlnavbacktobond{
+  position: absolute;
+  top: 4px;
+  left:240px;
+  > span{
+    font-size: 28px;
+    color: $achtergrond;
+  }
+}
 
 #volume{
   display: block;

@@ -326,6 +326,14 @@
   -webkit-box-shadow: 5px 0px 20px -5px #131211;
   box-shadow: 5px 0px 20px -5px #131211; }
 
+#girlnavbacktobond {
+  position: absolute;
+  top: 4px;
+  left: 240px; }
+  #girlnavbacktobond > span {
+    font-size: 28px;
+    color: #faf2f2; }
+
 #volume {
   display: block;
   color: #faf2f2; }
