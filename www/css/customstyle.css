@@ -284,6 +284,22 @@
     background: none repeat scroll 0 0 #b10a0a;
     box-shadow: 0 0 0 10px white; }
 
+.deckgrid[deckgrid]::before {
+  /* Specifies that the grid should have a maximum of 4 columns. Each column will have the classes 'column' and 'column-1-4' */
+  content: '4 .column.column-1-4';
+  font-size: 0;
+  /* See https://github.com/akoenig/angular-deckgrid/issues/14#issuecomment-35728861 */
+  visibility: hidden; }
+
+.deckgrid .column {
+  float: left; }
+
+.deckgrid .column-1- {
+  width: 25%; }
+
+.bondfoto {
+  max-width: 100%; }
+
 #rowbonds {
   margin-top: 30px;
   margin-left: auto;
@@ -329,9 +345,18 @@
 #girlnavbacktobond {
   position: absolute;
   top: 4px;
-  left: 240px; }
+  left: 240px;
+  text-decoration: none; }
   #girlnavbacktobond > span {
     font-size: 28px;
+    color: #faf2f2; }
+
+#backbutton {
+  margin-top: 3px;
+  padding-right: 7px;
+  text-decoration: none; }
+  #backbutton > span {
+    font-size: 29px;
     color: #faf2f2; }
 
 #volume {

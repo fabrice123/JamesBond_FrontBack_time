@@ -204,7 +204,60 @@ $scope.linkfunction=function(){
 
     })
 
-    .controller('SingleBondPictureCtrl', function($scope, $stateParams) {
+    .controller('SingleBondPictureCtrl', function($scope,$http,picturebondservice, $stateParams) {
+
+
+
+        $scope.ide=$stateParams.bondId;
+
+        switch ($scope.ide)
+        {
+            case "0":
+
+                GetTheBondbyId(738);
+
+                //undefined
+                break;
+            case "1":
+                GetTheBondbyId(10167);
+                break;
+            case "2":
+                GetTheBondbyId(10669);
+
+                break;
+            case "3":
+                GetTheBondbyId(10222);
+
+                break;
+            case "4":
+                GetTheBondbyId(517);
+
+                break;
+            case "5":
+                GetTheBondbyId(8784);
+
+                break;
+            case "0":
+                GetTheBondbyId(738);
+
+                break;
+        }
+
+        console.log("kk"+$scope.pictures);
+        function GetTheBondbyId(bondid) {
+
+            picturebondservice.getpicturesbond(bondid).then(function (data) {
+
+
+
+                $scope.pictures = data;
+
+
+
+            });
+
+        }
+
 
     })
 
