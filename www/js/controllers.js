@@ -254,14 +254,104 @@ $scope.linkfunction=function(){
 
 
 
+
             });
 
         }
 
 
+
     })
 
-    .controller('SingleBondMovieCtrl', function($scope, $stateParams) {
+    .controller('SingleBondMovieCtrl', function($scope, $http,$q,moviesbondservice ,$stateParams) {
+
+        $scope.ide=$stateParams.bondId;
+
+        switch ($scope.ide)
+        {
+            case "0":
+
+                GetTheBondbyId(738);
+
+                //undefined
+                break;
+            case "1":
+                GetTheBondbyId(10167);
+                break;
+            case "2":
+                GetTheBondbyId(10669);
+
+                break;
+            case "3":
+                GetTheBondbyId(10222);
+
+                break;
+            case "4":
+                GetTheBondbyId(517);
+
+                break;
+            case "5":
+                GetTheBondbyId(8784);
+
+                break;
+            case "0":
+                GetTheBondbyId(738);
+
+                break;
+        }
+
+        function GetTheBondbyId(bondid) {
+           /* $scope.items = [];
+            $scope.totalItems=0;
+            $scope.startList = 0;
+            $scope.stopLoadingData = false;
+
+            $scope.more = function () {
+                console.log("k");
+                console.log( $scope.stopLoadingData);
+                if (!$scope.stopLoadingData) {
+                    $scope.loading = true;
+            $http.get('https://api.themoviedb.org/3/person/'+bondid+'?api_key=587a0b5335cd9ab61abe241c25591eb9&append_to_response=movie_credits', {"startList": $scope.startList}).success(function (data) {
+
+
+                $scope.totalItems=data.movie_credits.cast.length;
+                console.log($scope.totalItems);
+                angular.forEach(data.movie_credits.cast,function (key) {
+
+                    $scope.items.push(key);
+                });
+                $scope.stopLoadingData = ($scope.items.length === $scope.totalItems);
+                $scope.startList += 10;
+                console.log($scope.items.length);
+            });
+                };
+                $scope.loading = false;
+            };
+            $scope.more();*/
+            $scope.movies=[];
+            moviesbondservice.getmoviesbond(bondid).then(function (data) {
+
+
+                angular.forEach(data,function (key) {
+
+                    if(key['poster_path']==null)
+                    {
+                        console.log(key['poster_path']);
+
+                    }
+                    else {
+                        console.log(key);
+                        $scope.movies.push(key);
+                    }
+                });
+
+            console.log($scope.movies.length);
+
+
+
+            });
+        }
+
 
     })
 
