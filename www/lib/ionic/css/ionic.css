@@ -6324,6 +6324,7 @@ a.button {
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
+
    }
 
   to {
@@ -7036,9 +7037,10 @@ $ios-transition-box-shadow-end: -200px 0px 200px rgba(0,0,0,0.15), -5px 0px 5px 
     animation: fadeIn 0.7s; }
 
 .fade-in-not-out.ng-enter, .fade-in-not-out .ng-enter {
-  -webkit-animation: fadeIn 0.7s;
-  -moz-animation: fadeIn 0.7s;
-  animation: fadeIn 0.7s;
+  -webkit-animation: fadeIn 0.2s;
+  -moz-animation: fadeIn 0.2s;
+
+  animation: fadeIn 0.2s;
   position: relative; }
 .fade-in-not-out.ng-leave, .fade-in-not-out .ng-leave {
   display: none; }

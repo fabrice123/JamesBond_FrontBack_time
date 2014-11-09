@@ -425,15 +425,43 @@ console.log("ss");
 
     })
 
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
-})
+
+    .controller('MapsCtrl', function($scope, $stateParams,$ionicLoading, $compile,leafletEvents) {
+        console.log("kk");
+        $scope.eventStatus = 'Map View';
+
+        angular.extend($scope, {
+            center: {
+                lat: 39.8282,
+                lng: -98.5795,
+                zoom: 5
+            },
+            markers: {
+                mainMarker: {
+                    lat: 39.8282,
+                    lng: -98.5795,
+                    focus: true
+                }
+            },
+            events: {
+                markers: {
+                    enable: leafletEvents.getAvailableMarkerEvents()
+                }
+            }
+        });
+
+        var markerEvents = leafletEvents.getAvailableMarkerEvents();
+        for (var k in markerEvents) {
+            var eventName = 'leafletDirectiveMarker.' + markerEvents[k];
+            $scope.$on(eventName, function(event, args){
+                $scope.eventStatus = event.name;
+
+                console.log("Got " + event.name);
+            });
+        }
+
+
+    })
+
 
 
