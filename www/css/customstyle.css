@@ -55,17 +55,19 @@
       height: 1.3em;
       margin-left: 2px; }
 
-.navGirl1 {
-  background-image: url("../img/Bondgirls/VesperLynd.jpg");
+.navGirl1, .navGirl2, .navGirl3, .navGirl4, .navGirl5, .navGirl6, .navGirl7, .navGirl8, .navGirl9, .navGirl10, .navGirl11, .navGirl12, .navGirl13,
+.navGirl14, .navGirl15, .navGirl16, .navGirl17, .navGirl18, .navGirl19, .navGirl20, .navGirl21, .navGirl22, .navGirl23 {
+  background-image: url("../img/Bondgirls/UrsulaAndress.jpg");
   padding-top: 90px;
   background-size: 110%; }
-  .navGirl1 a {
+  .navGirl1 a, .navGirl2 a, .navGirl3 a, .navGirl4 a, .navGirl5 a, .navGirl6 a, .navGirl7 a, .navGirl8 a, .navGirl9 a, .navGirl10 a, .navGirl11 a, .navGirl12 a, .navGirl13 a,
+  .navGirl14 a, .navGirl15 a, .navGirl16 a, .navGirl17 a, .navGirl18 a, .navGirl19 a, .navGirl20 a, .navGirl21 a, .navGirl22 a, .navGirl23 a {
     background-color: transparent;
     position: absolute;
     top: 0px;
     left: -45px;
-    padding-left: 100px;
-    padding-right: 120px;
+    padding-left: 60px;
+    padding-right: 105px;
     padding-bottom: 36px;
     padding-top: 37px;
     color: white;
@@ -73,11 +75,190 @@
     font-family: Gulim;
     font-size: 30px;
     letter-spacing: -2px; }
-    .navGirl1 a div {
+    .navGirl1 a div, .navGirl2 a div, .navGirl3 a div, .navGirl4 a div, .navGirl5 a div, .navGirl6 a div, .navGirl7 a div, .navGirl8 a div, .navGirl9 a div, .navGirl10 a div, .navGirl11 a div, .navGirl12 a div, .navGirl13 a div,
+    .navGirl14 a div, .navGirl15 a div, .navGirl16 a div, .navGirl17 a div, .navGirl18 a div, .navGirl19 a div, .navGirl20 a div, .navGirl21 a div, .navGirl22 a div, .navGirl23 a div {
       background: transparent;
-      width: 182px;
+      width: 240px;
       height: 1.3em;
       margin-left: 2px; }
+
+.navGirl2 {
+  background-image: url("../img/Bondgirls/DanielaBianchi.jpg"); }
+  .navGirl2 a {
+    padding-left: 63px;
+    padding-right: 102px; }
+    .navGirl2 a div {
+      width: 226px; }
+
+.navGirl3 {
+  background-image: url("../img/Bondgirls/HonorBlackman.png"); }
+  .navGirl3 a {
+    padding-left: 50px;
+    padding-right: 42px; }
+    .navGirl3 a div {
+      width: 254px; }
+
+.navGirl4 {
+  background-image: url("../img/Bondgirls/ClaudineAuger.jpg"); }
+  .navGirl4 a {
+    padding-left: 60px;
+    padding-right: 5px; }
+    .navGirl4 a div {
+      width: 237px; }
+
+.navGirl5 {
+  background-image: url("../img/Bondgirls/MieHama.jpg"); }
+  .navGirl5 a {
+    padding-left: 109px;
+    padding-right: 95px; }
+    .navGirl5 a div {
+      width: 134px; }
+
+.navGirl6 {
+  background-image: url("../img/Bondgirls/DianaRigg.jpg"); }
+  .navGirl6 a {
+    padding-left: 100px;
+    padding-right: 84px; }
+    .navGirl6 a div {
+      width: 155px; }
+
+.navGirl7 {
+  background-image: url("../img/Bondgirls/JillStJohn.jpg"); }
+  .navGirl7 a {
+    padding-left: 89px;
+    padding-right: 51px; }
+    .navGirl7 a div {
+      width: 174px; }
+
+.navGirl8 {
+  background-image: url("../img/Bondgirls/JaneSeymour.jpg"); }
+  .navGirl8 a {
+    padding-left: 75px;
+    padding-right: 35px; }
+    .navGirl8 a div {
+      width: 207px; }
+
+.navGirl9 {
+  background-image: url("../img/Bondgirls/BrittEkland.jpg"); }
+  .navGirl9 a {
+    padding-left: 87px;
+    padding-right: 45px; }
+    .navGirl9 a div {
+      width: 187px; }
+
+.navGirl10 {
+  background-image: url("../img/Bondgirls/BarbaraBach.jpg"); }
+  .navGirl10 a {
+    padding-left: 73px;
+    padding-right: 36px; }
+    .navGirl10 a div {
+      width: 209px; }
+
+.navGirl11 {
+  background-image: url("../img/Bondgirls/LoisChiles.jpg"); }
+  .navGirl11 a {
+    padding-left: 97px;
+    padding-right: 59px; }
+    .navGirl11 a div {
+      width: 162px; }
+
+.navGirl12 {
+  background-image: url("../img/Bondgirls/CaroleBouquet.jpg"); }
+  .navGirl12 a {
+    padding-left: 55px;
+    padding-right: 15px; }
+    .navGirl12 a div {
+      width: 248px; }
+
+.navGirl13 {
+  background-image: url("../img/Bondgirls/MaudAdams.jpg"); }
+  .navGirl13 a {
+    padding-left: 92px;
+    padding-right: 44px; }
+    .navGirl13 a div {
+      width: 182px; }
+
+.navGirl14 {
+  background-image: url("../img/Bondgirls/TanyaRoberts.jpg"); }
+  .navGirl14 a {
+    padding-left: 72px;
+    padding-right: 26px; }
+    .navGirl14 a div {
+      width: 220px; }
+
+.navGirl15 {
+  background-image: url("../img/Bondgirls/MaryamDabo.jpg"); }
+  .navGirl15 a {
+    padding-left: 76px;
+    padding-right: 36px; }
+    .navGirl15 a div {
+      width: 206px; }
+
+.navGirl16 {
+  background-image: url("../img/Bondgirls/CareyLowell.jpg"); }
+  .navGirl16 a {
+    padding-left: 80px;
+    padding-right: 33px; }
+    .navGirl16 a div {
+      width: 205px; }
+
+.navGirl17 {
+  background-image: url("../img/Bondgirls/IzabellaScorupco.jpg"); }
+  .navGirl17 a {
+    padding-left: 48px;
+    padding-right: 9px;
+    font-size: 28px; }
+    .navGirl17 a div {
+      width: 262px; }
+
+.navGirl18 {
+  background-image: url("../img/Bondgirls/MichelleYeoh.jpg"); }
+  .navGirl18 a {
+    padding-left: 74px;
+    padding-right: 29px; }
+    .navGirl18 a div {
+      width: 215px; }
+
+.navGirl19 {
+  background-image: url("../img/Bondgirls/DeniseRichards.jpg"); }
+  .navGirl19 a {
+    padding-left: 58px;
+    padding-right: 21px; }
+    .navGirl19 a div {
+      width: 240px; }
+
+.navGirl20 {
+  background-image: url("../img/Bondgirls/HalleBerry.jpg"); }
+  .navGirl20 a {
+    padding-left: 93px;
+    padding-right: 45px; }
+    .navGirl20 a div {
+      width: 180px; }
+
+.navGirl21 {
+  background-image: url("../img/Bondgirls/EvaGreen.jpg"); }
+  .navGirl21 a {
+    padding-left: 100px;
+    padding-right: 66px; }
+    .navGirl21 a div {
+      width: 153px; }
+
+.navGirl22 {
+  background-image: url("../img/Bondgirls/OlgaKurylenko.jpg"); }
+  .navGirl22 a {
+    padding-left: 57px;
+    padding-right: 18px; }
+    .navGirl22 a div {
+      width: 243px; }
+
+.navGirl23 {
+  background-image: url("../img/Bondgirls/BereniceMarlohe.jpg"); }
+  .navGirl23 a {
+    padding-left: 49px;
+    padding-right: 15px;
+    font-size: 28px; }
+    .navGirl23 a div {
+      width: 254px; }
 
 .navItemCars {
   text-align: center;
@@ -136,13 +317,20 @@
       margin-left: 2px; }
 
 /*      NAVIGATIE ITEMS HOVER    */
-.navItemBond a div:hover, .navItemGirls a div:hover, .navItemCars a div:hover, .navItemMap a div:hover, .navGirl1 a div:hover {
+.navItemBond a div:hover, .navItemGirls a div:hover, .navItemCars a div:hover, .navItemMap a div:hover, .navGirl1 a div:hover,
+.navGirl2 a div:hover, .navGirl3 a div:hover, .navGirl4 a div:hover, .navGirl5 a div:hover, .navGirl6 a div:hover, .navGirl7 a div:hover,
+.navGirl8 a div:hover, .navGirl9 a div:hover, .navGirl10 a div:hover, .navGirl11 a div:hover, .navGirl12 a div:hover, .navGirl13 a div:hover,
+.navGirl14 a div:hover, .navGirl15 a div:hover, .navGirl16 a div:hover, .navGirl17 a div:hover, .navGirl18 a div:hover, .navGirl19 a div:hover,
+.navGirl20 a div:hover, .navGirl21 a div:hover, .navGirl22 a div:hover, .navGirl23 a div:hover {
   border-bottom: 2px solid transparent;
   animation: underlineNav 2s;
   -o-animation: underlineNav 2s;
   -webkit-animation: underlineNav 2s; }
 
-.navItemMap:hover, .navItemGirls:hover, .navItemBond:hover, .navItemCars:hover, .navGirl1:hover {
+.navItemMap:hover, .navItemGirls:hover, .navItemBond:hover, .navItemCars:hover, .navGirl1:hover, .navGirl2:hover, .navGirl3:hover, .navGirl4:hover,
+.navGirl5:hover, .navGirl6:hover, .navGirl7:hover, .navGirl8:hover, .navGirl9:hover, .navGirl10:hover, .navGirl11:hover, .navGirl12:hover, .navGirl13:hover,
+.navGirl14:hover, .navGirl15:hover, .navGirl16:hover, .navGirl17:hover, .navGirl18:hover, .navGirl19:hover, .navGirl20:hover, .navGirl21:hover,
+.navGirl22:hover, .navGirl23:hover {
   animation: scaleNav 2s;
   -o-animation: scaleNav 2s;
   -webkit-animation: scaleNav 2s; }
@@ -160,19 +348,16 @@
 @-webkit-keyframes scaleNav {
   from {
     background-size: 110%; }
-
   to {
     background-size: 120%; } }
 @-o-keyframes scaleNav {
   from {
     background-size: 110%; }
-
   to {
     background-size: 120%; } }
 @keyframes scaleNav {
   from {
     background-size: 110%; }
-
   to {
     background-size: 120%; } }
 /*      SCHERM 1 (BONDS)    */
@@ -335,6 +520,9 @@
   box-shadow: 0 5px 20px -5px #131211;
   border-color: #131211;
   background-color: #131211; }
+  .bar.bar-stable .button {
+    color: transparent;
+    display: none; }
 
 #logo {
   width: 233px;
@@ -530,3 +718,5 @@
   .films {
     margin: 4.3em 0em;
     color: #b10a0a; } }
+
+/*# sourceMappingURL=customstyle.css.map */
