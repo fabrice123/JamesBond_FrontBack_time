@@ -16,24 +16,22 @@
                 <img ng-src="http://image.tmdb.org/t/p/w500/{{foto.file_path}}" alt="Will always be shown 1st">
             </div>
         </masonry>-->
-        <div infinite-scroll="myPaging()" infinite-scroll-distance="3">
-        <div  deckgrid class="deckgrid" source="pictures">
+
+        <div  deckgrid class="deckgrid  " source="pictures">
             <div class="a-card">
 
                 <div class="card">
-                    <div class="item item-image">
+                    <div class="item item-image  ">
 
-                        <img class="bondfoto fade-add " ng-src="http://image.tmdb.org/t/p/w500/{{card.file_path}}">
+                        <img class="bondfoto" ng-src="http://image.tmdb.org/t/p/w500/{{card.file_path}}">
                     </div>
 
                 </div>
 
             </div>
         </div>
-        </div>
 
 
-       <!-- </div>-->
 
 
 </ion-content>

@@ -62,15 +62,46 @@ angular.module('starter.controllers', [])
                 if($scope.bonds[i].imagesrc.src == img.src)
                 {
 
-                    $scope.changeName(i);
+
                     $scope.jbnimber=i+1;
                     console.log($scope.jbnimber);
                     console.log( $scope.bonds);
                     if(i === $scope.bonds.length-1){
-                        document.getElementById(element).src = $scope.bonds[0].imagesrc.src;
+                        document.getElementById(element).className= "bondImage fade";
+                        setTimeout(function(){ document.getElementById(element).src = $scope.bonds[0].imagesrc.src;},200);
+                        setTimeout(function(){  if(document.getElementById(element).className=="bondImage fade")
+                        {
+                            document.getElementById(element).className= "bondImage fade-in-not-out";
+                        }
+                        else{
+
+                            document.getElementById(element).className= "bondImage fade-in-not-out-in";
+
+                        }
+                            $scope.changeName(i);
+                        },350);
+                        console.log(i);
                         break;
                     }
-                    document.getElementById(element).src = $scope.bonds[i+1].imagesrc.src;
+
+
+
+                    console.log(document.getElementById(element));
+                    document.getElementById(element).className= "bondImage fade";
+                    setTimeout(function(){  document.getElementById(element).src = $scope.bonds[i+1].imagesrc.src;},200);
+                    setTimeout(function(){  if(document.getElementById(element).className=="bondImage fade")
+                    {
+                        document.getElementById(element).className= "bondImage fade-in-not-out";
+                    }
+                    else{
+
+                        document.getElementById(element).className= "bondImage fade-in-not-out-in";
+
+                    }
+                        $scope.changeName(i);
+                    },350);
+
+
                     break;
                 }
             }
@@ -85,12 +116,39 @@ angular.module('starter.controllers', [])
                 if($scope.bonds[i].imagesrc.src == img.src)
                 {
                     if(i === 0){
-                        document.getElementById(element).src =$scope.bonds[5].imagesrc.src;
-                        $scope.changeName($scope.bonds.length - 2);
+                        document.getElementById(element).className= "bondImage fade";
+                        setTimeout(function(){  document.getElementById(element).src =$scope.bonds[5].imagesrc.src;},200);
+                        setTimeout(function(){  if(document.getElementById(element).className=="bondImage fade")
+                        {
+                            document.getElementById(element).className= "bondImage fade-in-not-out";
+                        }
+                        else{
+
+                            document.getElementById(element).className= "bondImage fade-in-not-out-in";
+
+                        }
+                            $scope.changeName($scope.bonds.length - 2);
+                        },350);
+
                         break;
                     }
-                    document.getElementById(element).src = $scope.bonds[i-1].imagesrc.src;
-                    $scope.changeName(i-2);
+
+                    document.getElementById(element).className= "bondImage fade";
+
+                    setTimeout(function(){ document.getElementById(element).src = $scope.bonds[i-1].imagesrc.src;},200);
+
+                    setTimeout(function(){  if(document.getElementById(element).className=="bondImage fade")
+                    {
+                        document.getElementById(element).className= "bondImage fade-in-not-out";
+                    }
+                    else{
+
+                        document.getElementById(element).className= "bondImage fade-in-not-out-in";
+
+                    }
+                        $scope.changeName(i-2);
+                    },350);
+
                     //alert(i);
                     break;
                 }
@@ -248,7 +306,7 @@ $scope.linkfunction=function(){
 
             picturebondservice.getpicturesbond(bondid).then(function (data) {
 
-
+console.log("ss");
 
                 $scope.pictures = data;
 

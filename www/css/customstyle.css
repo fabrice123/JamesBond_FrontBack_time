@@ -300,18 +300,13 @@
 .bondfoto {
   max-width: 100%; }
 
-.fade-add {
-  /* remember to place a 0s transition here
-     to ensure that the styles are applied instantly
-     even if the element already has a transition style */
-  transition: 0s linear all;
-  /* starting CSS styles */
-  opacity: 1; }
-
-.fade-add.fade-add-active {
-  /* this will be the length of the animation */
-  transition: 1s linear all;
-  opacity: 0; }
+.banvan.fadein {
+  -webkit-transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s;
+  -moz-transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s;
+  -o-transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s;
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s;
+  opacity: 1;
+  /* Default value but added for clarity */ }
 
 #rowbonds {
   margin-top: 30px;
