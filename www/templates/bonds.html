@@ -7,12 +7,12 @@
   </ion-nav-buttons>
   <ion-content class="has-header">
     <div class="bonds">
-        <img src="img/SeanConnery.png" class="bondImage" id="mainBond" />
+        <img src="img/SeanConnery.png" class="bondImage " id="mainBond" />
         <div class="bondNames">
             <p id="firstname" class="bondFirstname">Sean</p>
             <p id="lastname" class="bondName">Connery</p>
             <div class="scrollBonds">
-                <button id="leftScroll" class="button button-icon icon ion-chevron-left" ng-click="previousImage('mainBond')"></button>
+                <button id="leftScroll" class="button button-icon icon ion-chevron-left"  ng-click="previousImage('mainBond')"></button>
                 <button id="rightScroll" class="button button-icon icon ion-chevron-right" ng-click="nextImage('mainBond')"></button>
             </div>
         </div>
@@ -20,11 +20,11 @@
         <a class="wie" id="wie" ng-href="#/app/bonds/whoami/{{jbnimber}}">Who am I?</a>
         <a class="dotWie" id="dotWie" ng-href="#/app/bonds/whoami/{{jbnimber}}"></a>
 
-        <a class="pics" id="pics" href="http://www.google.be">Pictures</a>
-        <a class="dotPics" id="dotPics" href="http://www.google.be"></a>
+        <a class="pics" id="pics" ng-href="#/app/bonds/pics/{{jbnimber}}">Pictures</a>
+        <a class="dotPics" id="dotPics" ng-href="#/app/bonds/pics/{{jbnimber}}"></a>
 
-        <a class="films" id="films" href="http://www.google.be">Movies</a>
-        <a class="dotFilms" id="dotFilms" href="http://www.google.be"></a>
+        <a class="films" id="films"  ng-href="#/app/bonds/movies/{{jbnimber}}">Movies</a>
+        <a class="dotFilms" id="dotFilms"  ng-href="#/app/bonds/movies/{{jbnimber}}"></a>
     </div>
   </ion-content>
 </ion-view>

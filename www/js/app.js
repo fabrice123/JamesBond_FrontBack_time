@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers','starter.service'])
+angular.module('starter', ['ionic','akoenig.deckgrid','ngAnimate','angular-whenScrolled', 'starter.controllers','starter.service'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -18,9 +18,12 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.service'])
       StatusBar.styleDefault();
     }
   });
+
+
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+
+        .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
     .state('app', {
@@ -59,6 +62,26 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.service'])
         }
       }
     })
+
+      .state('app.pictures', {
+          url: "/bonds/pics/:bondId",
+          views: {
+              'menuContent' :{
+                  templateUrl: "templates/bondpictures.html",
+                  controller: 'SingleBondPictureCtrl'
+              }
+          }
+      })
+
+      .state('app.moviesbond', {
+          url: "/bonds/movies/:bondId",
+          views: {
+              'menuContent' :{
+                  templateUrl: "templates/bondmovies.html",
+                  controller: 'SingleBondMovieCtrl'
+              }
+          }
+      })
 
     .state('girls', {
         url: "/girls",

@@ -759,7 +759,7 @@ $full-slide-transition-duration: 400ms;
 
 .fade-in-not-out {
   &.ng-enter, .ng-enter {
-    @include animation(fadeIn 0.3s);
+    @include animation(fadeIn 0.2s);
     position: relative;
   }
   &.ng-leave, .ng-leave {

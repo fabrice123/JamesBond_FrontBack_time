@@ -2860,7 +2860,7 @@ a.subdued {
     left: 0;
     z-index: 0;
     overflow: hidden;
-    margin: 0 10px;
+    margin: 0 25px;
     min-width: 30px;
     height: 43px;
     text-align: center;
@@ -6323,10 +6323,12 @@ a.button {
 
 @-webkit-keyframes fadeIn {
   from {
-    opacity: 0; }
+    opacity: 0;
+   }
 
   to {
-    opacity: 1; } }
+
+      opacity: 1; } }
 
 @-moz-keyframes fadeIn {
   from {
@@ -7029,14 +7031,14 @@ $ios-transition-box-shadow-end: -200px 0px 200px rgba(0,0,0,0.15), -5px 0px 5px 
   -moz-animation: fadeOut 0.3s;
   animation: fadeOut 0.3s; }
   .fade-in.active {
-    -webkit-animation: fadeIn 0.3s;
-    -moz-animation: fadeIn 0.3s;
-    animation: fadeIn 0.3s; }
+    -webkit-animation: fadeIn 0.7s;
+    -moz-animation: fadeIn 0.7s;
+    animation: fadeIn 0.7s; }
 
 .fade-in-not-out.ng-enter, .fade-in-not-out .ng-enter {
-  -webkit-animation: fadeIn 0.3s;
-  -moz-animation: fadeIn 0.3s;
-  animation: fadeIn 0.3s;
+  -webkit-animation: fadeIn 0.7s;
+  -moz-animation: fadeIn 0.7s;
+  animation: fadeIn 0.7s;
   position: relative; }
 .fade-in-not-out.ng-leave, .fade-in-not-out .ng-leave {
   display: none; }
