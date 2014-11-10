@@ -49,15 +49,19 @@ angular.module('starter.service', [])
 })
 
     .service('bondgirlsservice', function ($http, $q) {
-
-        var thegirls=new Array();
-
-
-
         this.getbondgirls = function (girlid) {
 
 
-    }
+
+                var deferred = $q.defer();
+            $http.get('https://api.themoviedb.org/3/person/'+ girlid+'?api_key=587a0b5335cd9ab61abe241c25591eb9').success(function (data) {
+                data["profile_path"]="http://image.tmdb.org/t/p/w500/"+data["profile_path"];
+                deferred.resolve(data);
+
+            });
+                return deferred.promise;
+            }
+
 });
 
 

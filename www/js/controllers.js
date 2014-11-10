@@ -1,5 +1,8 @@
 angular.module('starter.controllers', [])
 
+
+
+
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
 
@@ -417,9 +420,75 @@ console.log("ss");
 
 
 
-    .controller('GirlsCtrl', function($scope, $stateParams) {
+    .controller('GirlsCtrl', function($scope, $http,$q,$stateParams,bondgirlsservice,TDCardDelegate,$timeout) {
+       var i;
+        var cardTypes = [];
 
+        $scope.thegirls=new Array(22);
+       $scope.thegirls=[9871,9896,9907,9919,10070,10168,10190,10223,10341,10458,10475,10500,10342,10660,10670,10679,10695,1620,9205,4587,10912,18182,1030261];
+
+$scope.loading=true;
+$scope.cardTypes=[];
+        $scope.pipi="http://image.tmdb.org/t/p/w500/"
+        for (i = 0; i <  $scope.thegirls.length; i++) {
+            console.log( "1");
+            bondgirlsservice.getbondgirls($scope.thegirls[i]).then(function (data) {
+                console.log(data + "    "+i);
+                $scope.cardTypes.push(data);
+
+              if($scope.cardTypes.length==23)
+              {
+                  girls();
+
+                 $timeout(function(){$scope.loading=false;},1000) ;
+              }
+                else
+              {
+                  $scope.loading=true;
+              }
+
+
+            });
+
+
+        }
+       function girls(){
+       cardTypes=$scope.cardTypes;
+           console.log(cardTypes);
+
+
+
+
+        $scope.cards = Array.prototype.slice.call(cardTypes, 0);
+
+console.log($scope.cards);
+        $scope.cardDestroyed = function(index) {
+            $scope.cards.splice(index, 1);
+        };
+
+        $scope.addCard = function() {
+
+            var newCard = cardTypes[Math.floor(Math.random() * cardTypes.length)];
+            console.log(newCard);
+            newCard.id = Math.random();
+            $scope.cards.push(angular.extend({}, newCard));
+        }
+
+       }
     })
+
+    .controller('CardCtrl', function($scope, TDCardDelegate) {
+        console.log("k");
+        $scope.cardSwipedLeft = function(index) {
+            console.log('LEFT SWIPE');
+            $scope.addCard();
+        };
+        $scope.cardSwipedRight = function(index) {
+            console.log('RIGHT SWIPE' + index);
+            $scope.cardDestroyed();
+        };
+    })
+
 
     .controller('BondgirlsCtrl', function($scope, $stateParams) {
 
