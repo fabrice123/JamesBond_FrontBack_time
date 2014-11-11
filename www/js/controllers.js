@@ -469,25 +469,76 @@ $scope.cardTypes=[];
                $scope.cards.splice(index, 1);
            };
 
-           $scope.addCard = function() {
+           $scope.addCard = function(index) {
+               console.log("kkkkkk" + index);
+               var index2=index %cardTypes.length;
+               if(index2==0)
+               {
+                   index2=1;
+               }
                var newCard = cardTypes[Math.floor(Math.random() * cardTypes.length)];
+               var saveCard = cardTypes[index2];
                newCard.id = Math.random();
+
+               $scope.cards.push(angular.extend({},saveCard));
                $scope.cards.push(angular.extend({}, newCard));
            }
        }
+
+
+
+
+
     })
 
-    .controller('CardCtrl', function($scope, TDCardDelegate) {
+    .controller('CardCtrl', function($scope, TDCardDelegate,$timeout) {
         console.log("k");
 
-        $scope.cardSwipedLeft = function(index) {
-            console.log('LEFT SWIPE');
-            $scope.addCard();
-        };
-        $scope.cardSwipedRight = function(index) {
-            console.log('RIGHT SWIPE');
-            $scope.addCard();
-        };
+$scope.lastgirl=document.getElementsByClassName("td-cards")[0].lastChild;
+
+$timeout(function()
+{
+
+    $scope.destroythecard = function() {
+        var getid=$scope.lastgirl.previousElementSibling.className;
+        //start 5 en eindig bij  8 7 6
+
+        getid= getid.split("-",2);
+        console.log(getid[1]);
+        $scope.cardSwipedLeft(getid[1]);
+
+
+    };
+
+    $scope.addthecard = function() {
+        var getid=$scope.lastgirl.previousElementSibling.className;
+        //start 5 en eindig bij  8 7 6
+
+        getid= getid.split("-",2);
+        console.log(getid[1]);
+        $scope.cardSwipedRight(getid[1]);
+
+
+    };
+
+    $scope.cardSwipedLeft = function(index) {
+        console.log('LEFT SWIPE');
+        console.log(index);
+        $scope.cardDestroyed(index);
+
+    };
+    $scope.cardSwipedRight = function(index) {
+        console.log('RIGHT SWIPE');
+        console.log(index);
+        $scope.addCard(index);
+    };
+
+
+},0);
+
+
+
+
     })
 
 
@@ -498,38 +549,34 @@ $scope.cardTypes=[];
 
     .controller('MapsCtrl', function($scope, $stateParams,$ionicLoading, $compile,leafletEvents) {
         console.log("kk");
-        $scope.eventStatus = 'Map View';
 
-        angular.extend($scope, {
-            center: {
-                lat: 39.8282,
-                lng: -98.5795,
-                zoom: 2
-            },
-            markers: {
-                mainMarker: {
-                    lat: 39.8282,
-                    lng: -98.5795,
-                    focus: true
-                }
-            },
-            events: {
-                markers: {
-                    enable: leafletEvents.getAvailableMarkerEvents()
-                }
-            }
+
+        var map = L.map('map').setView([
+            39.905687,-75.166955], 2);
+
+// add MapQuest tile layer, must give proper OpenStreetMap attribution according to MapQuest terms
+       // 'http://{s}.tiles.mapbox.com/v3/moklick.gf03ihjf/{z}/{x}/{y}.png'
+
+
+        L.tileLayer('http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        var mapIcon = L.icon({
+            iconUrl: 'http://profile.ak.fbcdn.net/hprofile-ak-ash4/373528_124230297591358_127600844_q.jpg',
+            iconRetinaUrl: 'http://profile.ak.fbcdn.net/hprofile-ak-ash4/373528_124230297591358_127600844_q.jpg',
+            iconSize: [50, 50],
+            iconAnchor: [22, 50],
+            popupAnchor: [0, -56],
+            shadowUrl: '',
+            shadowRetinaUrl: '',
+            shadowSize: [68, 95],
+            shadowAnchor: [22, 94]
         });
 
-        var markerEvents = leafletEvents.getAvailableMarkerEvents();
-        for (var k in markerEvents) {
-            var eventName = 'leafletDirectiveMarker.' + markerEvents[k];
-            $scope.$on(eventName, function(event, args){
-                $scope.eventStatus = event.name;
 
-                console.log("Got " + event.name);
-            });
-        }
-
+        L.marker([39.905687,-75.166955], {icon: mapIcon}).addTo(map).bindPopup('Baseball!!').openPopup();
+        L.marker([50.5, 30.5]).addTo(map);
 
     })
 
