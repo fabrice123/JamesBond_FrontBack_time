@@ -4,8 +4,19 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic','akoenig.deckgrid','ngAnimate','angular-whenScrolled', 'starter.controllers','starter.service'])
+angular.module('starter', ['ionic','akoenig.deckgrid','ngAnimate','angular-whenScrolled', 'ionic.contrib.ui.tinderCards','starter.controllers','starter.service','leaflet-directive'])
+    .directive('noScroll', function($document) {
+        console.log($document);
+        return {
+            restrict: 'A',
+            link: function($scope, $element, $attr) {
 
+                $document.on('touchmove', function(e) {
+                    e.preventDefault();
+                });
+            }
+        }
+    })
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -17,10 +28,11 @@ angular.module('starter', ['ionic','akoenig.deckgrid','ngAnimate','angular-whenS
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
-  });
+  })
 
 
 })
+
 
 
         .config(function($stateProvider, $urlRouterProvider) {
@@ -47,7 +59,8 @@ angular.module('starter', ['ionic','akoenig.deckgrid','ngAnimate','angular-whenS
       url: "/map",
       views: {
         'menuContent' :{
-          templateUrl: "templates/map.html"
+          templateUrl: "templates/map.html",
+            controller: 'MapsCtrl'
         }
       }
     })

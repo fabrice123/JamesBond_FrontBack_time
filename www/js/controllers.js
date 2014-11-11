@@ -1,5 +1,8 @@
 angular.module('starter.controllers', [])
 
+
+
+
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
 
@@ -417,23 +420,118 @@ console.log("ss");
 
 
 
-    .controller('GirlsCtrl', function($scope, $stateParams) {
+    .controller('GirlsCtrl', function($scope, $http,$q,$stateParams,bondgirlsservice,TDCardDelegate,$timeout) {
+       var i;
+        var cardTypes = [
+            { image: 'https://pbs.twimg.com/profile_images/479740132258361344/KaYdH9hE.jpeg' },
+            { image: 'https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png' },
+            { image: 'https://pbs.twimg.com/profile_images/491995398135767040/ie2Z_V6e.jpeg' },
+        ];
 
+        $scope.thegirls=new Array(22);
+       $scope.thegirls=[9871,9896,9907,9919,10070,10168,10190,10223,10341,10458,10475,10500,10342,10660,10670,10679,10695,1620,9205,4587,10912,18182,1030261];
+
+$scope.loading=true;
+$scope.cardTypes=[];
+
+        for (i = 0; i <  $scope.thegirls.length; i++) {
+            console.log( "1");
+            bondgirlsservice.getbondgirls($scope.thegirls[i]).then(function (data) {
+                console.log(data + "    "+i);
+                $scope.cardTypes.push(data);
+
+              if($scope.cardTypes.length==23)
+              {
+                  girls();
+
+                 $timeout(function(){$scope.loading=false;},1000) ;
+              }
+                else
+              {
+                  $scope.loading=true;
+              }
+
+
+            });
+
+
+        }
+       function girls(){
+       cardTypes=$scope.cardTypes;
+           console.log(cardTypes);
+
+
+
+
+           $scope.cards = Array.prototype.slice.call(cardTypes, 0);
+
+           $scope.cardDestroyed = function(index) {
+               $scope.cards.splice(index, 1);
+           };
+
+           $scope.addCard = function() {
+               var newCard = cardTypes[Math.floor(Math.random() * cardTypes.length)];
+               newCard.id = Math.random();
+               $scope.cards.push(angular.extend({}, newCard));
+           }
+       }
     })
+
+    .controller('CardCtrl', function($scope, TDCardDelegate) {
+        console.log("k");
+
+        $scope.cardSwipedLeft = function(index) {
+            console.log('LEFT SWIPE');
+            $scope.addCard();
+        };
+        $scope.cardSwipedRight = function(index) {
+            console.log('RIGHT SWIPE');
+            $scope.addCard();
+        };
+    })
+
 
     .controller('BondgirlsCtrl', function($scope, $stateParams) {
 
     })
 
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
-})
+
+    .controller('MapsCtrl', function($scope, $stateParams,$ionicLoading, $compile,leafletEvents) {
+        console.log("kk");
+        $scope.eventStatus = 'Map View';
+
+        angular.extend($scope, {
+            center: {
+                lat: 39.8282,
+                lng: -98.5795,
+                zoom: 2
+            },
+            markers: {
+                mainMarker: {
+                    lat: 39.8282,
+                    lng: -98.5795,
+                    focus: true
+                }
+            },
+            events: {
+                markers: {
+                    enable: leafletEvents.getAvailableMarkerEvents()
+                }
+            }
+        });
+
+        var markerEvents = leafletEvents.getAvailableMarkerEvents();
+        for (var k in markerEvents) {
+            var eventName = 'leafletDirectiveMarker.' + markerEvents[k];
+            $scope.$on(eventName, function(event, args){
+                $scope.eventStatus = event.name;
+
+                console.log("Got " + event.name);
+            });
+        }
+
+
+    })
+
 
 
