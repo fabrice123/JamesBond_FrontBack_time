@@ -453,16 +453,19 @@ a {
 @-webkit-keyframes scaleNav {
   from {
     background-size: 110%; }
+
   to {
     background-size: 120%; } }
 @-o-keyframes scaleNav {
   from {
     background-size: 110%; }
+
   to {
     background-size: 120%; } }
 @keyframes scaleNav {
   from {
     background-size: 110%; }
+
   to {
     background-size: 120%; } }
 /*      SCHERM 1 (BONDS)    */
@@ -642,10 +645,10 @@ a {
     color: transparent;
     display: none; }
 
-.td-cards {
+td-cards {
   display: block; }
 
-.td-card {
+td-card {
   position: absolute;
   left: 50%;
   margin-top: 80px;
@@ -656,14 +659,14 @@ a {
   border: 1px solid #999;
   border-radius: 6px; }
 
-.td-card h1 {
+td-card h1 {
   margin-top: 0px;
   height: 200px; }
 
-.td-card .image {
+td-card .image {
   position: relative; }
 
-.td-card img {
+td-card img {
   max-width: 100%;
   border-radius: 6px; }
 
@@ -885,5 +888,3 @@ a {
   .films {
     margin: 15% -9%;
     color: #b10a0a; } }
-
-/*# sourceMappingURL=customstyle.css.map */

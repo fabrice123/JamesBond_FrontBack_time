@@ -461,8 +461,6 @@ $scope.cardTypes=[];
            console.log(cardTypes);
 
 
-
-
            $scope.cards = Array.prototype.slice.call(cardTypes, 0);
 
            $scope.cardDestroyed = function(index) {
