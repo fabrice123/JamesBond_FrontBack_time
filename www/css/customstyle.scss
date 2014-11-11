@@ -563,7 +563,7 @@ $jbblack:#131211;
   border-radius: 9px;
   box-shadow: 0 0 0 3px rgba(255, 255, 255, 1);
   height: 18px;
-  margin: 10%;
+  margin: 8.5%;
   position: absolute;
   transition: all 0.8s ease 0.1s;
   width: 18px;
@@ -571,7 +571,7 @@ $jbblack:#131211;
   &:hover {
     width: 10px;
     height: 10px;
-    margin: 10%;
+    margin: 8.5%;
     background: none repeat scroll 0 0 $rood;
     box-shadow: 0 0 0 10px rgba(255, 255, 255, 1);
   }
@@ -623,8 +623,6 @@ margin-top: 30px;
   margin-right: auto;
   width: 95%;
 }
-<<<<<<< HEAD
-=======
 
 
 .films{
@@ -641,7 +639,6 @@ margin-top: 30px;
     text-decoration: none;
   }
 }
->>>>>>> e81decfdc0783e1cfca114f9eb8e4c025b157eec
  /*nav on top*/
 .bar.bar-stable
 {
@@ -659,11 +656,11 @@ margin-top: 30px;
 }
 
 
-td-cards {
+.td-cards {
   display: block;
 }
 
-td-card {
+.td-card {
   position: absolute;
   left: 50%;
   margin-top: 80px;
@@ -676,16 +673,16 @@ td-card {
 
   border-radius: 6px;
 }
-td-card h1{
+.td-card h1{
   margin-top: 0px;
   height: 200px;
 }
 
-td-card .image {
+.td-card .image {
   position: relative;
 }
 
-td-card img {
+.td-card img {
   max-width: 100%;
   border-radius: 6px;
 }
