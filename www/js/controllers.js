@@ -118,7 +118,15 @@ angular.module('starter.controllers', [])
             {
                 if($scope.bonds[i].imagesrc.src == img.src)
                 {
+                  console.log($scope.jbnimber);
+                    $scope.jbnimber=i-1;
+                    if($scope.jbnimber==-1)
+                    {
+                        $scope.jbnimber=5;
+                    }
+                    console.log($scope.jbnimber);
                     if(i === 0){
+                        console.log("mm2");
                         document.getElementById(element).className= "bondImage fade";
                         setTimeout(function(){  document.getElementById(element).src =$scope.bonds[5].imagesrc.src;},200);
                         setTimeout(function(){  if(document.getElementById(element).className=="bondImage fade")
@@ -126,7 +134,7 @@ angular.module('starter.controllers', [])
                             document.getElementById(element).className= "bondImage fade-in-not-out";
                         }
                         else{
-
+                            console.log("mm3");
                             document.getElementById(element).className= "bondImage fade-in-not-out-in";
 
                         }

@@ -968,6 +968,14 @@ width: 233px;
     width: 33.33333%;
   }
 
+//pijlen
+
+  .bondNames #leftScroll{
+margin-left: 53px;
+  }
+
+
+
 
 
   // image en naam
@@ -1063,6 +1071,16 @@ width: 233px;
   }
 }
 
+@media screen and (max-width:620px) {
+  //pijlen
+
+  .bondNames #leftScroll{
+    margin-left:13px;
+    left:-194px;
+  }
+}
+
+
 /*644*/
 @media screen and (max-width: 500px) {
   #logo{
@@ -1073,7 +1091,10 @@ width: 233px;
     width: 100%;
     margin-left: -13em;
   }
-
+  .bondNames #leftScroll{
+    margin-left:13px;
+    left:19px;
+  }
 //bondimages
 
   .deckgrid[deckgrid]::before {
@@ -1130,5 +1151,17 @@ width: 233px;
   .films{
     margin: 15% -9%;
     color: $rood;
+  }
+}
+
+//mediaquery 330px
+@media screen and (max-width: 500px) {
+  .bondNames #leftScroll{
+    margin-left:13px;
+    left:70px;
+  }
+  .bondNames #rightScroll{
+    margin-left:13px;
+    left:279px;
   }
 }
