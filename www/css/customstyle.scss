@@ -546,6 +546,85 @@ $distance: 400px;
   }
 }
 
+//globe in map
+
+@-webkit-keyframes rotation {
+  0%   { background-position: 0 0; }
+  100% { background-position: -400px 0; }
+}
+@keyframes rotation {
+  0%   { background-position: 0 0; }
+  100% { background-position: -400px 0; }
+}
+@keyframes rotationtwo {
+  0%   { background-position: -400px 0; }
+  100% { background-position: -0 0; }
+}
+@-webkit-keyframes rotationtwo {
+  0%   { background-position: -400px 0; }
+  100% { background-position: -0 0; }
+}
+
+.globe, .globe:before {
+  position: absolute;
+  z-index: 1;
+
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  margin-left: -150px;
+  margin-top: -150px;
+ background-image: url(http://fc09.deviantart.net/fs70/i/2010/323/8/4/defcon_world_map_wallpaper_by_gorillazxd-d335hxw.png);
+
+  background-repeat: repeat-x;
+  background-position: top left;
+  -webkit-border-radius: 400px;
+  border-radius: 400px;
+  -moz-border-radius:400px;
+  background-size: auto 400px;
+
+  background-color: rgba( 0, 0, 0, 0.03 );
+  opacity: 1;
+  -webkit-animation: rotation 3s infinite;
+  animation: rotation 3s infinite;
+
+}
+
+.globe:before {
+  content: "";
+  top: 50%;
+  z-index: 0;
+  -webkit-animation: rotationtwo 3s infinite;
+  animation: rotationtwo 3s infinite;
+  opacity: 0.3;
+}
+
+.globe
+{
+  position: relative;
+  margin-top: 50px;
+}
+
+#map50{
+  width: auto;
+  height: 600px;
+  overflow: hidden;
+  padding:0px;
+  border: 15px inset $jbblack;
+  margin-top: 100px;
+  margin-left: 20px;
+  margin-right: 16px;
+}
+
+#map25{
+  padding-right: 50px;
+
+}
+
+
+
+
+
 /*      NAVIGATIE ITEMS HOVER    */
 .navItemBond a div:hover, .navItemGirls a div:hover, .navItemCars a div:hover, .navItemMap a div:hover,.navGirl1 a div:hover,
 .navGirl2 a div:hover,.navGirl3 a div:hover,.navGirl4 a div:hover,.navGirl5 a div:hover,.navGirl6 a div:hover,.navGirl7 a div:hover,

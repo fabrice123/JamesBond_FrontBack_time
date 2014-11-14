@@ -334,8 +334,34 @@ console.log("ss");
 
     .controller('SingleBondMovieCtrl', function($scope, $http,$q,moviesbondservice ,$stateParams) {
 
-        $scope.ide=$stateParams.bondId;
 
+        //........................................................
+        // the array which represents the list
+        $scope.items = ["1. Scroll the list to load more"];
+        $scope.loading = true;
+
+        // this function fetches a random text and adds it to array
+        $scope.more = function(){
+            $http({
+                method: "GET",
+                url: "https://baconipsum.com/api/?type=all-meat&paras=2&start-with-lorem=1"
+            }).success(function(data, status, header, config){
+
+                // returned data contains an array of 2 sentences
+                for(line in data){
+                    newItem = ($scope.items.length+1)+". "+data[line];
+                    $scope.items.push(newItem);
+                }
+                $scope.loading = false;
+            });
+        };
+
+        // we call the function twice to populate the list
+        $scope.more();
+
+        //........................................................
+
+        $scope.ide=$stateParams.bondId;
         switch ($scope.ide)
         {
             case "0":
@@ -370,33 +396,7 @@ console.log("ss");
         }
 
         function GetTheBondbyId(bondid) {
-           /* $scope.items = [];
-            $scope.totalItems=0;
-            $scope.startList = 0;
-            $scope.stopLoadingData = false;
 
-            $scope.more = function () {
-                console.log("k");
-                console.log( $scope.stopLoadingData);
-                if (!$scope.stopLoadingData) {
-                    $scope.loading = true;
-            $http.get('https://api.themoviedb.org/3/person/'+bondid+'?api_key=587a0b5335cd9ab61abe241c25591eb9&append_to_response=movie_credits', {"startList": $scope.startList}).success(function (data) {
-
-
-                $scope.totalItems=data.movie_credits.cast.length;
-                console.log($scope.totalItems);
-                angular.forEach(data.movie_credits.cast,function (key) {
-
-                    $scope.items.push(key);
-                });
-                $scope.stopLoadingData = ($scope.items.length === $scope.totalItems);
-                $scope.startList += 10;
-                console.log($scope.items.length);
-            });
-                };
-                $scope.loading = false;
-            };
-            $scope.more();*/
             $scope.movies=[];
             moviesbondservice.getmoviesbond(bondid).then(function (data) {
 
@@ -568,6 +568,16 @@ $timeout(function()
             attribution: '&copy; <a href="www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
 
+        $scope.checker=function(kk){
+            console.log(kk);
+if(kk) {
+   m= L.marker([50.5, 30.5]).addTo(map);
+}
+            else{
+    map.removeLayer(m);
+}
+
+        }
         var mapIcon = L.icon({
             iconUrl: 'http://profile.ak.fbcdn.net/hprofile-ak-ash4/373528_124230297591358_127600844_q.jpg',
             iconRetinaUrl: 'http://profile.ak.fbcdn.net/hprofile-ak-ash4/373528_124230297591358_127600844_q.jpg',
@@ -582,7 +592,7 @@ $timeout(function()
 
 
         L.marker([39.905687,-75.166955], {icon: mapIcon}).addTo(map).bindPopup('Baseball!!').openPopup();
-        L.marker([50.5, 30.5]).addTo(map);
+
 
     })
 

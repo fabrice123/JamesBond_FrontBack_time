@@ -5,16 +5,47 @@
         <img id="logo" class="Responsive image"  src="img/logo_james_bond_site_logo_white.png"/>
     </ion-nav-buttons>
 
-    <div class="card" style="margin-top: 150px; height: 460px; background-image: url('img/$_3.jpg'); background-repeat: no-repeat;">
-      
+    <div class="row">
+
+        <div class="col col-75" id="map50">
+
       <!--  <div class="item item-text-wrap"  style="width: 100%; height: 500px;">-->
-           <div class="item item-text-wrap"  style="border-radius: 50%;width: 425px; height: 431px; left: 219px; top: 11px; overflow: hidden;">
-<!--http://codepen.io/Filippo/pen/muEBr-->
-            
-            <div id="map"  style=" postion:absolute; width: 160%; height:530px; left: -70px; top: -20px;"></div>
+
+<!--http://codepen.io/pollardld/pen/gmjrt
+
+http://codepen.io/mollie/pen/wEvbd-->
+
+                       <div id="map"  style=" postion:absolute; width:1200px; height:800px; left: 0px; top: -50px;"></div>
 
 
         </div>
-    </div>
 
+        <div class="col col-25" id="map25">
+            <div class="globe"></div>
+        <ion-scroll direction="y"  style="height: 200px;">
+
+
+
+            <div class="list">
+
+
+                <div class="item item-checkbox">
+                    <label class="checkbox">
+                        <input type="checkbox" ng-model="drno" ng-change="checker(drno)">
+                    </label>
+                    Dr.No
+                </div>
+                <div class="item item-checkbox">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                    </label>
+                    Dr.No
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    </ion-scroll>
     </ion-view>
