@@ -425,88 +425,159 @@ console.log("ss");
     })
 
 
+    .controller('GirlsCtrl', function($scope,$stateParams) {
 
-
-
-    .controller('GirlsCtrl', function($scope, $http,$q,$stateParams,bondgirlsservice,TDCardDelegate,$timeout) {
-       var i;
-        var cardTypes = [
-            { image: 'https://pbs.twimg.com/profile_images/479740132258361344/KaYdH9hE.jpeg' },
-            { image: 'https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png' },
-            { image: 'https://pbs.twimg.com/profile_images/491995398135767040/ie2Z_V6e.jpeg' },
-        ];
-
-        $scope.thegirls=new Array(22);
-       $scope.thegirls=[9871,9896,9907,9919,10070,10168,10190,10223,10341,10458,10475,10500,10342,10660,10670,10679,10695,1620,9205,4587,10912,18182,1030261];
-
-$scope.loading=true;
-$scope.cardTypes=[];
-
-        for (i = 0; i <  $scope.thegirls.length; i++) {
-            console.log( "1");
-            bondgirlsservice.getbondgirls($scope.thegirls[i]).then(function (data) {
-                console.log(data + "    "+i);
-                $scope.cardTypes.push(data);
-
-              if($scope.cardTypes.length==23)
-              {
-                  girls();
-
-                 $timeout(function(){$scope.loading=false;},1000) ;
-              }
-                else
-              {
-                  $scope.loading=true;
-              }
-
-
-            });
-
-
-        }
-       function girls(){
-       cardTypes=$scope.cardTypes;
-           console.log(cardTypes);
-
-
-           $scope.cards = Array.prototype.slice.call(cardTypes, 0);
-
-           $scope.cardDestroyed = function(index) {
-               $scope.cards.splice(index, 1);
-           };
-
-           $scope.addCard = function(index) {
-               console.log("kkkkkk" + index);
-               var index2=index %cardTypes.length;
-               if(index2==0)
-               {
-                   index2=1;
-               }
-               var newCard = cardTypes[Math.floor(Math.random() * cardTypes.length)];
-               var saveCard = cardTypes[index2];
-               newCard.id = Math.random();
-
-               $scope.cards.push(angular.extend({},saveCard));
-               $scope.cards.push(angular.extend({}, newCard));
-           }
-       }
-
-
-
-
+//menu van de girls
 
     })
 
+
+
+    .controller('SingleGirlCtrl', function($scope,$stateParams,girlservice) {
+
+        console.log($stateParams);
+        //  [9871,9896,9907,9919,10070,10168,10190,10223,10341,10458,10475,10500,10342,10660,10670,10679,10695,1620,9205,4587,10912,18182,1030261];
+        switch ($stateParams.girlId)
+        {
+            case "1":
+
+                GetTheGirlbyId(9871);
+
+                //undefined
+                break;
+            case "2":
+                GetTheGirlbyId(9896);
+                break;
+            case "3":
+                GetTheGirlbyId(9907);
+
+                break;
+            case "4":
+                GetTheGirlbyId(9919);
+
+                break;
+            case "5":
+                GetTheGirlbyId(10070);
+
+                break;
+            case "6":
+                GetTheGirlbyId(10168);
+
+                break;
+            case "7":
+                GetTheGirlbyId(10190);
+                // 10223,10341,10458,10475,10500,10342,10660,10670,10679,10695,1620,9205,4587,10912,18182,1030261];
+                break;
+            case "8":
+
+                GetTheGirlbyId(10223);
+
+                //undefined
+                break;
+            case "9":
+                GetTheGirlbyId(10341);
+                break;
+            case "10":
+                GetTheGirlbyId(10458);
+
+                break;
+            case "11":
+                GetTheGirlbyId(10475);
+
+                break;
+            case "12":
+                GetTheGirlbyId(10500);
+
+                break;
+            case "13":
+                GetTheGirlbyId(10342);
+
+                break;
+            case "14":
+                GetTheGirlbyId(10660);
+
+                break;
+            case "15":
+                // 10670,10679,10695,1620,9205,4587,10912,18182,1030261];
+                GetTheGirlbyId(10670);
+
+                //undefined
+                break;
+            case "16":
+                GetTheGirlbyId(10679);
+                break;
+            case "17":
+                GetTheGirlbyId(10695);
+
+                break;
+            case "18":
+                GetTheGirlbyId(1620);
+
+                break;
+            case "19":
+                GetTheGirlbyId(9205);
+
+                break;
+            case "20":
+                GetTheGirlbyId(4587);
+
+                break;
+            case "21":
+                GetTheGirlbyId(10912);
+
+                break;
+            case "22":
+                GetTheGirlbyId(18182);
+
+                break;
+            case "23":
+                GetTheGirlbyId(1030261);
+
+                break;
+
+
+        }
+        $scope.allgirlinfo=[];
+        function GetTheGirlbyId(girlid) {
+
+
+            girlservice.getsinglegirl(girlid).then(function (data) {
+
+console.log(data);
+
+
+                $scope.allgirlinfo=data;
+                $scope.allgirlinfo.biografie = $scope.allgirlinfo['biography'];
+                $scope.allgirlinfo.profileimage = $scope.allgirlinfo['profile_path'];
+                $scope.allgirlinfo.birthday = $scope.allgirlinfo['birthday'];
+                $scope.allgirlinfo.name = $scope.allgirlinfo['name'];
+
+                $scope.allgirlinfo.place_of_birth = $scope.allgirlinfo['place_of_birth'];
+
+            });
+        }
+
+    })
+
+
+
+//card controller is een controller in de bondgirlctrl om aan de kaarten te kunnen
     .controller('CardCtrl', function($scope, TDCardDelegate,$timeout) {
         console.log("k");
 
 $scope.lastgirl=document.getElementsByClassName("td-cards")[0].lastChild;
 
+
+
 $timeout(function()
 {
 
+    var getid;
+
+
+
     $scope.destroythecard = function() {
-        var getid=$scope.lastgirl.previousElementSibling.className;
+         getid=$scope.lastgirl.previousElementSibling.className;
         //start 5 en eindig bij  8 7 6
 
         getid= getid.split("-",2);
@@ -517,7 +588,7 @@ $timeout(function()
     };
 
     $scope.addthecard = function() {
-        var getid=$scope.lastgirl.previousElementSibling.className;
+        getid=$scope.lastgirl.previousElementSibling.className;
         //start 5 en eindig bij  8 7 6
 
         getid= getid.split("-",2);
@@ -548,7 +619,69 @@ $timeout(function()
     })
 
 
-    .controller('BondgirlsCtrl', function($scope, $stateParams) {
+    .controller('BondgirlsCtrl', function($scope, $http,$q,$stateParams,bondgirlsservice,TDCardDelegate,$timeout) {
+        var i;
+
+        $scope.thegirls=new Array(22);
+        $scope.thegirls=[9871,9896,9907,9919,10070,10168,10190,10223,10341,10458,10475,10500,10342,10660,10670,10679,10695,1620,9205,4587,10912,18182,1030261];
+
+        $scope.loading=true;
+        $scope.cardTypes=[];
+
+        for (i = 0; i <  $scope.thegirls.length; i++) {
+            console.log( "1");
+            bondgirlsservice.getbondgirls($scope.thegirls[i]).then(function (data) {
+                console.log(data + "    "+i);
+                $scope.cardTypes.push(data);
+
+                if($scope.cardTypes.length==23)
+                {
+                    girls();
+
+                    $timeout(function(){$scope.loading=false;},1000) ;
+                }
+                else
+                {
+                    $scope.loading=true;
+                }
+
+
+            });
+
+
+        }
+        function girls(){
+            cardTypes=$scope.cardTypes;
+            console.log(cardTypes);
+
+
+            $scope.cards = Array.prototype.slice.call(cardTypes, 0);
+
+            $scope.cardDestroyed = function(index) {
+                $scope.degirlid=index;
+                $scope.cards.splice(index, 1);
+            };
+
+            $scope.addCard = function(index) {
+                console.log("kkkkkk" + index);
+                $scope.degirlid=index;
+
+
+                var index2=index %cardTypes.length;
+                if(index2==0)
+                {
+                    index2=1;
+                }
+                var newCard = cardTypes[Math.floor(Math.random() * cardTypes.length)];
+                var saveCard = cardTypes[index2];
+                newCard.id = Math.random();
+
+                $scope.cards.push(angular.extend({},saveCard));
+                $scope.cards.push(angular.extend({}, newCard));
+            }
+        }
+
+
 
     })
 
