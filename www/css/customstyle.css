@@ -1,4 +1,5 @@
 /*      NAVIGATIE ITEMS    */
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
 .navItemBond {
   text-align: center;
   padding: 0px;
@@ -54,6 +55,110 @@
       width: 160px;
       height: 1.3em;
       margin-left: 2px; }
+
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif; }
+
+a {
+  text-decoration: none;
+  color: #333; }
+
+@keyframes yes {
+  0% {
+    transform: scale(1) rotateZ(0deg);
+    left: 0; }
+
+  30% {
+    transform: scale(1.05) rotateZ(0deg);
+    left: 0; }
+
+  100% {
+    transform: rotateZ(45deg);
+    left: 400px; } }
+.animateYes {
+  animation-fill-mode: both;
+  animation: yes 0.6s linear; }
+  .animateYes:before {
+    transform: rotateZ(-35deg);
+    background: url(http://i.imgur.com/Zkwj970.png) no-repeat center 10px; }
+
+@keyframes no {
+  0% {
+    transform: rotateZ(360deg);
+    right: 0; }
+
+  30% {
+    transform: scale(1.05) rotateZ(360deg);
+    right: 0; }
+
+  100% {
+    transform: rotateZ(315deg);
+    right: 400px; } }
+.animateNo {
+  animation-fill-mode: both;
+  animation: no 0.6s linear; }
+  .animateNo:before {
+    transform: rotateZ(35deg);
+    background: url(http://i.imgur.com/XqQZ4KR.png) no-repeat center 10px; }
+
+#control {
+  position: relative;
+  margin: 15px auto 0;
+  width: 250px; }
+  #control .button {
+    width: 65px;
+    height: 65px;
+    background: #eee;
+    position: absolute;
+    top: 5px;
+    border-radius: 50%;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05); }
+    #control .button .trigger {
+      background: white;
+      display: block;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      margin: 0 -5px;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: all .1s;
+      text-align: center;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05); }
+      #control .button .trigger:active {
+        transform: translateY(-50%) scale(0.75);
+        transition: all .05s linear; }
+      #control .button .trigger:before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        font-family: 'FontAwesome'; }
+  #control .no {
+    left: 38px; }
+    #control .no .trigger:before {
+      content: "\f00d";
+      font-size: 28px;
+      color: #c33; }
+  #control .yes {
+    right: 30px; }
+    #control .yes .trigger:before {
+      content: "\f004";
+      font-size: 22px;
+      color: #3b7; }
+  #control .info {
+    top: 17px;
+    left: 103px;
+    height: 52px;
+    width: 46px; }
+    #control .info .trigger {
+      width: 35px;
+      height: 35px; }
+      #control .info .trigger:before {
+        content: "\f05a";
+        font-size: 16px;
+        color: #3498db; }
 
 .navGirl1, .navGirl2, .navGirl3, .navGirl4, .navGirl5, .navGirl6, .navGirl7, .navGirl8, .navGirl9, .navGirl10, .navGirl11, .navGirl12, .navGirl13,
 .navGirl14, .navGirl15, .navGirl16, .navGirl17, .navGirl18, .navGirl19, .navGirl20, .navGirl21, .navGirl22, .navGirl23 {
@@ -316,6 +421,75 @@
       height: 1.3em;
       margin-left: 2px; }
 
+@-webkit-keyframes rotation {
+  0% {
+    background-position: 0 0; }
+
+  100% {
+    background-position: -400px 0; } }
+@keyframes rotation {
+  0% {
+    background-position: 0 0; }
+
+  100% {
+    background-position: -400px 0; } }
+@keyframes rotationtwo {
+  0% {
+    background-position: -400px 0; }
+
+  100% {
+    background-position: -0 0; } }
+@-webkit-keyframes rotationtwo {
+  0% {
+    background-position: -400px 0; }
+
+  100% {
+    background-position: -0 0; } }
+.globe, .globe:before {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  margin-left: -150px;
+  margin-top: -150px;
+  background-image: url(http://fc09.deviantart.net/fs70/i/2010/323/8/4/defcon_world_map_wallpaper_by_gorillazxd-d335hxw.png);
+  background-repeat: repeat-x;
+  background-position: top left;
+  -webkit-border-radius: 400px;
+  border-radius: 400px;
+  -moz-border-radius: 400px;
+  background-size: auto 400px;
+  background-color: rgba(0, 0, 0, 0.03);
+  opacity: 1;
+  -webkit-animation: rotation 3s infinite;
+  animation: rotation 3s infinite; }
+
+.globe:before {
+  content: "";
+  top: 50%;
+  z-index: 0;
+  -webkit-animation: rotationtwo 3s infinite;
+  animation: rotationtwo 3s infinite;
+  opacity: 0.3; }
+
+.globe {
+  position: relative;
+  margin-top: 50px; }
+
+#map50 {
+  width: auto;
+  height: 600px;
+  overflow: hidden;
+  padding: 0px;
+  border: 15px inset #131211;
+  margin-top: 100px;
+  margin-left: 20px;
+  margin-right: 16px; }
+
+#map25 {
+  padding-right: 50px; }
+
 /*      NAVIGATIE ITEMS HOVER    */
 .navItemBond a div:hover, .navItemGirls a div:hover, .navItemCars a div:hover, .navItemMap a div:hover, .navGirl1 a div:hover,
 .navGirl2 a div:hover, .navGirl3 a div:hover, .navGirl4 a div:hover, .navGirl5 a div:hover, .navGirl6 a div:hover, .navGirl7 a div:hover,
@@ -348,16 +522,19 @@
 @-webkit-keyframes scaleNav {
   from {
     background-size: 110%; }
+
   to {
     background-size: 120%; } }
 @-o-keyframes scaleNav {
   from {
     background-size: 110%; }
+
   to {
     background-size: 120%; } }
 @keyframes scaleNav {
   from {
     background-size: 110%; }
+
   to {
     background-size: 120%; } }
 /*      SCHERM 1 (BONDS)    */
@@ -539,10 +716,10 @@
     color: transparent;
     display: none; }
 
-.td-cards {
+td-cards {
   display: block; }
 
-.td-card {
+td-card {
   position: absolute;
   left: 50%;
   margin-top: 80px;
@@ -553,14 +730,14 @@
   border: 1px solid #999;
   border-radius: 6px; }
 
-.td-card h1 {
+td-card h1 {
   margin-top: 0px;
   height: 200px; }
 
-.td-card .image {
+td-card .image {
   position: relative; }
 
-.td-card img {
+td-card img {
   max-width: 100%;
   border-radius: 6px; }
 
@@ -663,6 +840,9 @@
   .deckgrid .column-1-3 {
     width: 33.33333%; }
 
+  .bondNames #leftScroll {
+    margin-left: 53px; }
+
   .bondFirstname {
     visibility: hidden; }
 
@@ -730,6 +910,10 @@
 
   .films {
     margin: 10% 5%; } }
+@media screen and (max-width: 620px) {
+  .bondNames #leftScroll {
+    margin-left: 13px;
+    left: -194px; } }
 /*644*/
 @media screen and (max-width: 500px) {
   #logo {
@@ -738,6 +922,10 @@
   .scrollBonds {
     width: 100%;
     margin-left: -13em; }
+
+  .bondNames #leftScroll {
+    margin-left: 13px;
+    left: 19px; }
 
   .deckgrid[deckgrid]::before {
     /* Specifies that the grid should have a maximum of 4 columns. Each column will have the classes 'column' and 'column-1-4' */
@@ -774,10 +962,21 @@
       margin: 23% -4.3%; }
 
   .films {
+<<<<<<< HEAD
     margin: 15% -9%; } }
 .pane {
   background-image: url("../img/Wallpaper.jpg");
   background-size: cover;
   background-repeat: no-repeat; }
+=======
+    margin: 15% -9%;
+    color: #b10a0a; } }
+@media screen and (max-width: 500px) {
+  .bondNames #leftScroll {
+    margin-left: 13px;
+    left: 70px; }
+>>>>>>> 1a1d6a7bfc33a9f36becc3821c0ac5cf4914a0ab
 
-/*# sourceMappingURL=customstyle.css.map */
+  .bondNames #rightScroll {
+    margin-left: 13px;
+    left: 279px; } }

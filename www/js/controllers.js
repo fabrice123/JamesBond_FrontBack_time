@@ -118,7 +118,15 @@ angular.module('starter.controllers', [])
             {
                 if($scope.bonds[i].imagesrc.src == img.src)
                 {
+                  console.log($scope.jbnimber);
+                    $scope.jbnimber=i-1;
+                    if($scope.jbnimber==-1)
+                    {
+                        $scope.jbnimber=5;
+                    }
+                    console.log($scope.jbnimber);
                     if(i === 0){
+                        console.log("mm2");
                         document.getElementById(element).className= "bondImage fade";
                         setTimeout(function(){  document.getElementById(element).src =$scope.bonds[5].imagesrc.src;},200);
                         setTimeout(function(){  if(document.getElementById(element).className=="bondImage fade")
@@ -126,7 +134,7 @@ angular.module('starter.controllers', [])
                             document.getElementById(element).className= "bondImage fade-in-not-out";
                         }
                         else{
-
+                            console.log("mm3");
                             document.getElementById(element).className= "bondImage fade-in-not-out-in";
 
                         }
@@ -326,8 +334,34 @@ console.log("ss");
 
     .controller('SingleBondMovieCtrl', function($scope, $http,$q,moviesbondservice ,$stateParams) {
 
-        $scope.ide=$stateParams.bondId;
 
+        //........................................................
+        // the array which represents the list
+        $scope.items = ["1. Scroll the list to load more"];
+        $scope.loading = true;
+
+        // this function fetches a random text and adds it to array
+        $scope.more = function(){
+            $http({
+                method: "GET",
+                url: "https://baconipsum.com/api/?type=all-meat&paras=2&start-with-lorem=1"
+            }).success(function(data, status, header, config){
+
+                // returned data contains an array of 2 sentences
+                for(line in data){
+                    newItem = ($scope.items.length+1)+". "+data[line];
+                    $scope.items.push(newItem);
+                }
+                $scope.loading = false;
+            });
+        };
+
+        // we call the function twice to populate the list
+        $scope.more();
+
+        //........................................................
+
+        $scope.ide=$stateParams.bondId;
         switch ($scope.ide)
         {
             case "0":
@@ -362,33 +396,7 @@ console.log("ss");
         }
 
         function GetTheBondbyId(bondid) {
-           /* $scope.items = [];
-            $scope.totalItems=0;
-            $scope.startList = 0;
-            $scope.stopLoadingData = false;
 
-            $scope.more = function () {
-                console.log("k");
-                console.log( $scope.stopLoadingData);
-                if (!$scope.stopLoadingData) {
-                    $scope.loading = true;
-            $http.get('https://api.themoviedb.org/3/person/'+bondid+'?api_key=587a0b5335cd9ab61abe241c25591eb9&append_to_response=movie_credits', {"startList": $scope.startList}).success(function (data) {
-
-
-                $scope.totalItems=data.movie_credits.cast.length;
-                console.log($scope.totalItems);
-                angular.forEach(data.movie_credits.cast,function (key) {
-
-                    $scope.items.push(key);
-                });
-                $scope.stopLoadingData = ($scope.items.length === $scope.totalItems);
-                $scope.startList += 10;
-                console.log($scope.items.length);
-            });
-                };
-                $scope.loading = false;
-            };
-            $scope.more();*/
             $scope.movies=[];
             moviesbondservice.getmoviesbond(bondid).then(function (data) {
 
@@ -417,22 +425,208 @@ console.log("ss");
     })
 
 
+    .controller('GirlsCtrl', function($scope,$stateParams) {
+
+//menu van de girls
+
+    })
 
 
 
-    .controller('GirlsCtrl', function($scope, $http,$q,$stateParams,bondgirlsservice,TDCardDelegate,$timeout) {
-       var i;
-        var cardTypes = [
-            { image: 'https://pbs.twimg.com/profile_images/479740132258361344/KaYdH9hE.jpeg' },
-            { image: 'https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png' },
-            { image: 'https://pbs.twimg.com/profile_images/491995398135767040/ie2Z_V6e.jpeg' },
-        ];
+    .controller('SingleGirlCtrl', function($scope,$stateParams,girlservice) {
+
+        console.log($stateParams);
+        //  [9871,9896,9907,9919,10070,10168,10190,10223,10341,10458,10475,10500,10342,10660,10670,10679,10695,1620,9205,4587,10912,18182,1030261];
+        switch ($stateParams.girlId)
+        {
+            case "1":
+
+                GetTheGirlbyId(9871);
+
+                //undefined
+                break;
+            case "2":
+                GetTheGirlbyId(9896);
+                break;
+            case "3":
+                GetTheGirlbyId(9907);
+
+                break;
+            case "4":
+                GetTheGirlbyId(9919);
+
+                break;
+            case "5":
+                GetTheGirlbyId(10070);
+
+                break;
+            case "6":
+                GetTheGirlbyId(10168);
+
+                break;
+            case "7":
+                GetTheGirlbyId(10190);
+                // 10223,10341,10458,10475,10500,10342,10660,10670,10679,10695,1620,9205,4587,10912,18182,1030261];
+                break;
+            case "8":
+
+                GetTheGirlbyId(10223);
+
+                //undefined
+                break;
+            case "9":
+                GetTheGirlbyId(10341);
+                break;
+            case "10":
+                GetTheGirlbyId(10458);
+
+                break;
+            case "11":
+                GetTheGirlbyId(10475);
+
+                break;
+            case "12":
+                GetTheGirlbyId(10500);
+
+                break;
+            case "13":
+                GetTheGirlbyId(10342);
+
+                break;
+            case "14":
+                GetTheGirlbyId(10660);
+
+                break;
+            case "15":
+                // 10670,10679,10695,1620,9205,4587,10912,18182,1030261];
+                GetTheGirlbyId(10670);
+
+                //undefined
+                break;
+            case "16":
+                GetTheGirlbyId(10679);
+                break;
+            case "17":
+                GetTheGirlbyId(10695);
+
+                break;
+            case "18":
+                GetTheGirlbyId(1620);
+
+                break;
+            case "19":
+                GetTheGirlbyId(9205);
+
+                break;
+            case "20":
+                GetTheGirlbyId(4587);
+
+                break;
+            case "21":
+                GetTheGirlbyId(10912);
+
+                break;
+            case "22":
+                GetTheGirlbyId(18182);
+
+                break;
+            case "23":
+                GetTheGirlbyId(1030261);
+
+                break;
+
+
+        }
+        $scope.allgirlinfo=[];
+        function GetTheGirlbyId(girlid) {
+
+
+            girlservice.getsinglegirl(girlid).then(function (data) {
+
+console.log(data);
+
+
+                $scope.allgirlinfo=data;
+                $scope.allgirlinfo.biografie = $scope.allgirlinfo['biography'];
+                $scope.allgirlinfo.profileimage = $scope.allgirlinfo['profile_path'];
+                $scope.allgirlinfo.birthday = $scope.allgirlinfo['birthday'];
+                $scope.allgirlinfo.name = $scope.allgirlinfo['name'];
+
+                $scope.allgirlinfo.place_of_birth = $scope.allgirlinfo['place_of_birth'];
+
+            });
+        }
+
+    })
+
+
+
+//card controller is een controller in de bondgirlctrl om aan de kaarten te kunnen
+    .controller('CardCtrl', function($scope, TDCardDelegate,$timeout) {
+        console.log("k");
+
+$scope.lastgirl=document.getElementsByClassName("td-cards")[0].lastChild;
+
+
+
+$timeout(function()
+{
+
+    var getid;
+
+
+
+    $scope.destroythecard = function() {
+         getid=$scope.lastgirl.previousElementSibling.className;
+        //start 5 en eindig bij  8 7 6
+
+        getid= getid.split("-",2);
+        console.log(getid[1]);
+        $scope.cardSwipedLeft(getid[1]);
+
+
+    };
+
+    $scope.addthecard = function() {
+        getid=$scope.lastgirl.previousElementSibling.className;
+        //start 5 en eindig bij  8 7 6
+
+        getid= getid.split("-",2);
+        console.log(getid[1]);
+        $scope.cardSwipedRight(getid[1]);
+
+
+    };
+
+    $scope.cardSwipedLeft = function(index) {
+        console.log('LEFT SWIPE');
+        console.log(index);
+        $scope.cardDestroyed(index);
+
+    };
+    $scope.cardSwipedRight = function(index) {
+        console.log('RIGHT SWIPE');
+        console.log(index);
+        $scope.addCard(index);
+    };
+
+
+},0);
+
+
+
+
+    })
+
+
+    .controller('BondgirlsCtrl', function($scope, $http,$q,$stateParams,bondgirlsservice,TDCardDelegate,$timeout) {
+        var i;
 
         $scope.thegirls=new Array(22);
-       $scope.thegirls=[9871,9896,9907,9919,10070,10168,10190,10223,10341,10458,10475,10500,10342,10660,10670,10679,10695,1620,9205,4587,10912,18182,1030261];
+        $scope.thegirls=[9871,9896,9907,9919,10070,10168,10190,10223,10341,10458,10475,10500,10342,10660,10670,10679,10695,1620,9205,4587,10912,18182,1030261];
 
-$scope.loading=true;
-$scope.cardTypes=[];
+        $scope.loading=true;
+        $scope.cardTypes=[];
 
         for (i = 0; i <  $scope.thegirls.length; i++) {
             console.log( "1");
@@ -440,95 +634,97 @@ $scope.cardTypes=[];
                 console.log(data + "    "+i);
                 $scope.cardTypes.push(data);
 
-              if($scope.cardTypes.length==23)
-              {
-                  girls();
+                if($scope.cardTypes.length==23)
+                {
+                    girls();
 
-                 $timeout(function(){$scope.loading=false;},1000) ;
-              }
+                    $timeout(function(){$scope.loading=false;},1000) ;
+                }
                 else
-              {
-                  $scope.loading=true;
-              }
+                {
+                    $scope.loading=true;
+                }
 
 
             });
 
 
         }
-       function girls(){
-       cardTypes=$scope.cardTypes;
-           console.log(cardTypes);
+        function girls(){
+            cardTypes=$scope.cardTypes;
+            console.log(cardTypes);
 
 
+            $scope.cards = Array.prototype.slice.call(cardTypes, 0);
+
+            $scope.cardDestroyed = function(index) {
+                $scope.degirlid=index;
+                $scope.cards.splice(index, 1);
+            };
+
+            $scope.addCard = function(index) {
+                console.log("kkkkkk" + index);
+                $scope.degirlid=index;
 
 
-           $scope.cards = Array.prototype.slice.call(cardTypes, 0);
+                var index2=index %cardTypes.length;
+                if(index2==0)
+                {
+                    index2=1;
+                }
+                var newCard = cardTypes[Math.floor(Math.random() * cardTypes.length)];
+                var saveCard = cardTypes[index2];
+                newCard.id = Math.random();
 
-           $scope.cardDestroyed = function(index) {
-               $scope.cards.splice(index, 1);
-           };
-
-           $scope.addCard = function() {
-               var newCard = cardTypes[Math.floor(Math.random() * cardTypes.length)];
-               newCard.id = Math.random();
-               $scope.cards.push(angular.extend({}, newCard));
-           }
-       }
-    })
-
-    .controller('CardCtrl', function($scope, TDCardDelegate) {
-        console.log("k");
-
-        $scope.cardSwipedLeft = function(index) {
-            console.log('LEFT SWIPE');
-            $scope.addCard();
-        };
-        $scope.cardSwipedRight = function(index) {
-            console.log('RIGHT SWIPE');
-            $scope.addCard();
-        };
-    })
+                $scope.cards.push(angular.extend({},saveCard));
+                $scope.cards.push(angular.extend({}, newCard));
+            }
+        }
 
 
-    .controller('BondgirlsCtrl', function($scope, $stateParams) {
 
     })
 
 
     .controller('MapsCtrl', function($scope, $stateParams,$ionicLoading, $compile,leafletEvents) {
         console.log("kk");
-        $scope.eventStatus = 'Map View';
 
-        angular.extend($scope, {
-            center: {
-                lat: 39.8282,
-                lng: -98.5795,
-                zoom: 2
-            },
-            markers: {
-                mainMarker: {
-                    lat: 39.8282,
-                    lng: -98.5795,
-                    focus: true
-                }
-            },
-            events: {
-                markers: {
-                    enable: leafletEvents.getAvailableMarkerEvents()
-                }
-            }
+
+        var map = L.map('map').setView([
+            39.905687,-75.166955], 2);
+
+// add MapQuest tile layer, must give proper OpenStreetMap attribution according to MapQuest terms
+       // 'http://{s}.tiles.mapbox.com/v3/moklick.gf03ihjf/{z}/{x}/{y}.png'
+
+
+        L.tileLayer('http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        $scope.checker=function(kk){
+            console.log(kk);
+if(kk) {
+   m= L.marker([50.5, 30.5]).addTo(map);
+}
+            else{
+    map.removeLayer(m);
+}
+
+        }
+        var mapIcon = L.icon({
+            iconUrl: 'http://profile.ak.fbcdn.net/hprofile-ak-ash4/373528_124230297591358_127600844_q.jpg',
+            iconRetinaUrl: 'http://profile.ak.fbcdn.net/hprofile-ak-ash4/373528_124230297591358_127600844_q.jpg',
+            iconSize: [50, 50],
+            iconAnchor: [22, 50],
+            popupAnchor: [0, -56],
+            shadowUrl: '',
+            shadowRetinaUrl: '',
+            shadowSize: [68, 95],
+            shadowAnchor: [22, 94]
         });
 
-        var markerEvents = leafletEvents.getAvailableMarkerEvents();
-        for (var k in markerEvents) {
-            var eventName = 'leafletDirectiveMarker.' + markerEvents[k];
-            $scope.$on(eventName, function(event, args){
-                $scope.eventStatus = event.name;
 
-                console.log("Got " + event.name);
-            });
-        }
+        L.marker([39.905687,-75.166955], {icon: mapIcon}).addTo(map).bindPopup('Baseball!!').openPopup();
 
 
     })

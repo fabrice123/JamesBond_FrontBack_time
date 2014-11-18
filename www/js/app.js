@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic','akoenig.deckgrid','ngAnimate','angular-whenScrolled', 'ionic.contrib.ui.tinderCards','starter.controllers','starter.service','leaflet-directive'])
-    .directive('noScroll', function($document) {
+   /* .directive('noScroll', function($document) {
         console.log($document);
         return {
             restrict: 'A',
@@ -16,7 +16,30 @@ angular.module('starter', ['ionic','akoenig.deckgrid','ngAnimate','angular-whenS
                 });
             }
         }
+    })*/
+   /* .directive("whenScrolled", function(){
+        return{
+
+            restrict: 'A',
+            link: function(scope, elem, attrs){
+console.log(elem);
+                // we get a list of elements of size 1 and need the first element
+                var raw = elem[0];
+
+                // we load more elements when scrolled past a limit
+
+                raw.bind("scroll", function(){
+                    if(raw.scrollTop+raw.offsetHeight+5 >= raw.scrollHeight){
+                        scope.loading = true;
+
+                        // we can give any function which loads more elements into the list
+                        scope.$apply(attrs.whenScrolled);
+                    }
+                });
+            }
+        }
     })
+*/
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -103,6 +126,7 @@ angular.module('starter', ['ionic','akoenig.deckgrid','ngAnimate','angular-whenS
         controller: 'GirlsCtrl'
     })
 
+
       .state('girls.bondgirls', {
           url: "/bondgirls",
           views: {
@@ -111,7 +135,18 @@ angular.module('starter', ['ionic','akoenig.deckgrid','ngAnimate','angular-whenS
                   controller: 'BondgirlsCtrl'
               }
           }
+      })
+
+      .state('girls.enkelegirl', {
+          url: "/bondgirls/whoami/:girlId",
+          views: {
+              'menuContent' :{
+                  templateUrl: "templates/girl.html",
+                  controller: 'SingleGirlCtrl'
+              }
+          }
       });
+
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/bonds');
 });
