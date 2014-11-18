@@ -2,7 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8936441d-7856-4ab6-b096-d6d61458d7cd" name="Default" comment="">
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
+=======
+<<<<<<< HEAD
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/bond.html" afterPath="$PROJECT_DIR$/www/templates/bond.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/bonds.html" afterPath="$PROJECT_DIR$/www/templates/bonds.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/customstyle.css.map" afterPath="$PROJECT_DIR$/www/css/customstyle.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/customstyle.css" afterPath="$PROJECT_DIR$/www/css/customstyle.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/customstyle.scss" afterPath="$PROJECT_DIR$/www/css/customstyle.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/css/ionic.css" afterPath="$PROJECT_DIR$/www/lib/ionic/css/ionic.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/.idea/workspace.xml" afterPath="$PROJECT_DIR$/www/.idea/workspace.xml" />
+=======
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/templates/girl.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/app.js" afterPath="$PROJECT_DIR$/www/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controllers.js" afterPath="$PROJECT_DIR$/www/js/controllers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/girls.html" afterPath="$PROJECT_DIR$/www/templates/girls.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/menuGirl.html" afterPath="$PROJECT_DIR$/www/templates/menuGirl.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/service.js" afterPath="$PROJECT_DIR$/www/js/service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+>>>>>>> 1a1d6a7bfc33a9f36becc3821c0ac5cf4914a0ab
+>>>>>>> origin/master
     </list>
     <ignored path="JamesBond_FrontBack_time.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,8 +48,18 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state vertical-scroll-proportion="-9.153846" vertical-offset="289" max-vertical-offset="1241">
               <caret line="31" column="58" selection-start-line="31" selection-start-column="58" selection-end-line="31" selection-end-column="58" />
+=======
+<<<<<<< HEAD
+            <state vertical-scroll-proportion="0.0" vertical-offset="945" max-vertical-offset="1305">
+              <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+=======
+            <state vertical-scroll-proportion="-9.153846" vertical-offset="510" max-vertical-offset="1224">
+              <caret line="44" column="38" selection-start-line="44" selection-start-column="38" selection-end-line="44" selection-end-column="38" />
+>>>>>>> 1a1d6a7bfc33a9f36becc3821c0ac5cf4914a0ab
+>>>>>>> origin/master
               <folding />
             </state>
           </provider>
@@ -38,8 +68,17 @@
       <file leaf-file-name="girls.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/templates/girls.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="782">
+=======
+<<<<<<< HEAD
+            <state vertical-scroll-proportion="-10.0" vertical-offset="210" max-vertical-offset="1035">
+              <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
+=======
+            <state vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="782">
+>>>>>>> origin/master
               <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+>>>>>>> 1a1d6a7bfc33a9f36becc3821c0ac5cf4914a0ab
               <folding />
             </state>
           </provider>
@@ -48,13 +87,29 @@
       <file leaf-file-name="bonds.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/templates/bonds.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="612">
+=======
+<<<<<<< HEAD
+            <state vertical-scroll-proportion="-1.25" vertical-offset="390" max-vertical-offset="1080">
+              <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+=======
+            <state vertical-scroll-proportion="-15.692307" vertical-offset="0" max-vertical-offset="612">
+>>>>>>> origin/master
               <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+>>>>>>> 1a1d6a7bfc33a9f36becc3821c0ac5cf4914a0ab
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file leaf-file-name="girls.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www/templates/girls.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.4703833" vertical-offset="0" max-vertical-offset="574">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+=======
       <file leaf-file-name="girl.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/templates/girl.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -73,6 +128,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="735" max-vertical-offset="1717">
               <caret line="67" column="26" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="26" />
+>>>>>>> 1a1d6a7bfc33a9f36becc3821c0ac5cf4914a0ab
               <folding />
             </state>
           </provider>
@@ -81,7 +137,15 @@
       <file leaf-file-name="bond.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/templates/bond.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state vertical-scroll-proportion="0.0" vertical-offset="403" max-vertical-offset="1173">
+=======
+<<<<<<< HEAD
+            <state vertical-scroll-proportion="0.0" vertical-offset="11237" max-vertical-offset="11835">
+              <caret line="764" column="0" selection-start-line="764" selection-start-column="0" selection-end-line="764" selection-end-column="0" />
+=======
+            <state vertical-scroll-proportion="-25.692308" vertical-offset="403" max-vertical-offset="1173">
+>>>>>>> origin/master
               <caret line="63" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
               <folding />
             </state>
@@ -93,6 +157,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="1372" max-vertical-offset="2584">
               <caret line="128" column="65" selection-start-line="128" selection-start-column="65" selection-end-line="128" selection-end-column="65" />
+>>>>>>> 1a1d6a7bfc33a9f36becc3821c0ac5cf4914a0ab
               <folding />
             </state>
           </provider>
@@ -101,8 +166,17 @@
       <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state vertical-scroll-proportion="0.0" vertical-offset="9012" max-vertical-offset="12563">
+=======
+<<<<<<< HEAD
+            <state vertical-scroll-proportion="0.0" vertical-offset="6930" max-vertical-offset="8145">
+              <caret line="462" column="0" selection-start-line="462" selection-start-column="0" selection-end-line="462" selection-end-column="0" />
+=======
+            <state vertical-scroll-proportion="-12.071428" vertical-offset="9012" max-vertical-offset="12563">
+>>>>>>> origin/master
               <caret line="550" column="47" selection-start-line="550" selection-start-column="35" selection-end-line="550" selection-end-column="47" />
+>>>>>>> 1a1d6a7bfc33a9f36becc3821c0ac5cf4914a0ab
               <folding />
             </state>
           </provider>
@@ -111,18 +185,41 @@
       <file leaf-file-name="map.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/templates/map.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="952">
               <caret line="13" column="41" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
               <folding />
+=======
+<<<<<<< HEAD
+            <state vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="345">
+              <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+              <folding />
+=======
+            <state vertical-scroll-proportion="-5.6153846" vertical-offset="75" max-vertical-offset="952">
+              <caret line="13" column="41" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#ion-view#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ion-scroll#0;n#div#1;n#div#0;n#ion-view#0;n#!!top" expanded="true" />
+              </folding>
+>>>>>>> 1a1d6a7bfc33a9f36becc3821c0ac5cf4914a0ab
+>>>>>>> origin/master
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file leaf-file-name="customstyle.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/css/customstyle.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.625" vertical-offset="9990" max-vertical-offset="14850">
+              <caret line="683" column="21" selection-start-line="683" selection-start-column="21" selection-end-line="683" selection-end-column="21" />
+=======
       <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="1937" max-vertical-offset="2703">
               <caret line="129" column="33" selection-start-line="129" selection-start-column="33" selection-end-line="129" selection-end-column="33" />
+>>>>>>> 1a1d6a7bfc33a9f36becc3821c0ac5cf4914a0ab
               <folding />
             </state>
           </provider>
@@ -164,9 +261,15 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< HEAD
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="817" />
+=======
     <option name="x" value="386" />
     <option name="width" value="1534" />
     <option name="height" value="1040" />
+>>>>>>> 1a1d6a7bfc33a9f36becc3821c0ac5cf4914a0ab
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -202,6 +305,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+<<<<<<< HEAD
+=======
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="JamesBond_FrontBack_time" />
@@ -470,6 +575,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+>>>>>>> 1a1d6a7bfc33a9f36becc3821c0ac5cf4914a0ab
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -479,7 +585,11 @@
     <property name="options.lastSelected" value="org.jetbrains.plugins.terminal.TerminalOptionsConfigurable" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$USER_HOME$/Dropbox/5De Semester/Frontend Webdevelopment/Week 7/AngularLabo" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+>>>>>>> origin/master
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
@@ -541,8 +651,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="386" y="0" width="1534" height="1040" extended-state="1" />
     <editor active="true" />
+=======
+<<<<<<< HEAD
+    <frame x="0" y="23" width="1440" height="817" extended-state="6" />
+=======
+    <frame x="386" y="0" width="1534" height="1040" extended-state="0" />
+>>>>>>> 1a1d6a7bfc33a9f36becc3821c0ac5cf4914a0ab
+    <editor active="false" />
+>>>>>>> origin/master
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -551,7 +670,11 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17259552" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+<<<<<<< HEAD
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14572193" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+=======
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15682063" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+>>>>>>> 1a1d6a7bfc33a9f36becc3821c0ac5cf4914a0ab
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18796992" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -787,9 +910,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.6852272" vertical-offset="0" max-vertical-offset="2873">
           <caret line="139" column="24" selection-start-line="139" selection-start-column="17" selection-end-line="139" selection-end-column="24" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -863,6 +983,12 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/www/css/customstyle.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.625" vertical-offset="9990" max-vertical-offset="14850">
+          <caret line="683" column="21" selection-start-line="683" selection-start-column="21" selection-end-line="683" selection-end-column="21" />
+=======
     <entry file="file://$PROJECT_DIR$/www/img/$_3.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -872,26 +998,67 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="578">
           <caret line="28" column="11" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="11" />
+<<<<<<< HEAD
+=======
+>>>>>>> 1a1d6a7bfc33a9f36becc3821c0ac5cf4914a0ab
+          <folding />
+>>>>>>> origin/master
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/css/customstyle.scss">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state vertical-scroll-proportion="-10.0" vertical-offset="210" max-vertical-offset="1035">
+          <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
+=======
         <state vertical-scroll-proportion="0.0" vertical-offset="9594" max-vertical-offset="21267">
           <caret line="594" column="11" selection-start-line="594" selection-start-column="11" selection-end-line="594" selection-end-column="11" />
+<<<<<<< HEAD
+=======
+>>>>>>> 1a1d6a7bfc33a9f36becc3821c0ac5cf4914a0ab
+          <folding />
+>>>>>>> origin/master
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/www/templates/map.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="345">
+          <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+=======
+    <entry file="file://$PROJECT_DIR$/www/css/customstyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="7727" max-vertical-offset="16728">
+          <caret line="469" column="10" selection-start-line="469" selection-start-column="10" selection-end-line="469" selection-end-column="10" />
+<<<<<<< HEAD
+=======
+>>>>>>> 1a1d6a7bfc33a9f36becc3821c0ac5cf4914a0ab
+          <folding />
+>>>>>>> origin/master
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state vertical-scroll-proportion="0.0" vertical-offset="7695" max-vertical-offset="9231">
+          <caret line="462" column="0" selection-start-line="462" selection-start-column="0" selection-end-line="462" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/css/customstyle.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="7727" max-vertical-offset="16728">
-          <caret line="469" column="10" selection-start-line="469" selection-start-column="10" selection-end-line="469" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/map.html">
-      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="952">
+=======
+        <state vertical-scroll-proportion="0.0" vertical-offset="12138" max-vertical-offset="13090">
+          <caret line="764" column="0" selection-start-line="764" selection-start-column="0" selection-end-line="764" selection-end-column="0" />
+=======
+        <state vertical-scroll-proportion="-5.6153846" vertical-offset="75" max-vertical-offset="952">
+>>>>>>> origin/master
           <caret line="13" column="41" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
           <folding />
         </state>
@@ -909,22 +1076,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="782">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+>>>>>>> 1a1d6a7bfc33a9f36becc3821c0ac5cf4914a0ab
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.25" vertical-offset="390" max-vertical-offset="1080">
+          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+=======
     <entry file="file://$PROJECT_DIR$/www/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1937" max-vertical-offset="2703">
           <caret line="129" column="33" selection-start-line="129" selection-start-column="33" selection-end-line="129" selection-end-column="33" />
+>>>>>>> 1a1d6a7bfc33a9f36becc3821c0ac5cf4914a0ab
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/www/templates/girls.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4703833" vertical-offset="0" max-vertical-offset="574">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+=======
     <entry file="file://$PROJECT_DIR$/www/templates/menuGirl.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1372" max-vertical-offset="2584">
           <caret line="128" column="65" selection-start-line="128" selection-start-column="65" selection-end-line="128" selection-end-column="65" />
+>>>>>>> 1a1d6a7bfc33a9f36becc3821c0ac5cf4914a0ab
           <folding />
         </state>
       </provider>
