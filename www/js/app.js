@@ -126,7 +126,6 @@ console.log(elem);
         controller: 'GirlsCtrl'
     })
 
-
       .state('girls.bondgirls', {
           url: "/bondgirls",
           views: {
@@ -135,18 +134,7 @@ console.log(elem);
                   controller: 'BondgirlsCtrl'
               }
           }
-      })
-
-      .state('girls.enkelegirl', {
-          url: "/bondgirls/whoami/:girlId",
-          views: {
-              'menuContent' :{
-                  templateUrl: "templates/girl.html",
-                  controller: 'SingleGirlCtrl'
-              }
-          }
       });
-
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/bonds');
 });
