@@ -386,11 +386,13 @@
     margin-top: -30px;
     text-shadow: 2px -2px 4px rgba(28, 28, 28, 0.45); }
   .bondNames #leftScroll {
-    margin-top: -140px;
-    margin-left: 30px; }
+    position: absolute;
+    margin-top: -12%;
+    margin-left: -47%; }
   .bondNames #rightScroll {
-    margin-top: -140px;
-    margin-left: 550px; }
+    position: absolute;
+    margin-top: -12%;
+    margin-left: 43%; }
 
 .dotWie {
   background: none repeat scroll 0 0 #3c3c3c;
@@ -662,15 +664,11 @@
     width: 33.33333%; }
 
   .bondFirstname {
-    display: none; }
+    visibility: hidden; }
 
   .bondName {
-    display: none; }
-
-  .scrollBonds {
-    margin-top: 17em;
-    margin-left: -12em;
-    width: 100%; }
+    width: 100%;
+    visibility: hidden; }
 
   .dotFilms {
     margin: 19% 3%; }
@@ -760,8 +758,7 @@
       margin: 105% -4.3%; }
 
   .wie {
-    margin: 97% -12%;
-    color: #b10a0a; }
+    margin: 97% -12%; }
 
   .dotPics {
     margin: 23% -67%; }
@@ -769,8 +766,7 @@
       margin: 23% -66.3%; }
 
   .pics {
-    margin: 15% -71.5%;
-    color: #b10a0a; }
+    margin: 15% -71.5%; }
 
   .dotFilms {
     margin: 23% -5%; }
@@ -778,7 +774,10 @@
       margin: 23% -4.3%; }
 
   .films {
-    margin: 15% -9%;
-    color: #b10a0a; } }
+    margin: 15% -9%; } }
+.pane {
+  background-image: url("../img/Wallpaper.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
 
 /*# sourceMappingURL=customstyle.css.map */

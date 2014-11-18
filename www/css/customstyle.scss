@@ -481,12 +481,14 @@ $jbblack:#131211;
     text-shadow: 2px -2px 4px rgba(28, 28, 28, 0.45);
   }
   #leftScroll{
-    margin-top: -140px;
-    margin-left: 30px;
+    position: absolute;
+    margin-top: -12%;
+    margin-left: -47%;
   }
   #rightScroll{
-    margin-top: -140px;
-    margin-left: 550px;
+    position: absolute;
+    margin-top: -12%;
+    margin-left: 43%;
   }
 }
 //Bollen
@@ -821,16 +823,13 @@ width: 233px;
 
   // image en naam
   .bondFirstname{
-    display:none;
+    visibility: hidden;
   }
   .bondName{
-    display:none;
-  }
-  .scrollBonds{
-    margin-top: 17em;
-    margin-left: -12em;
     width: 100%;
+    visibility: hidden;
   }
+
   //Bollen
   .dotFilms {
     margin: 19% 3%;
@@ -954,7 +953,6 @@ width: 233px;
 
   .wie{
     margin: 97% -12%;
-    color: $rood;
   }
 
   .dotPics {
@@ -966,7 +964,6 @@ width: 233px;
 
   .pics{
     margin: 15% -71.5%;
-    color: $rood;
   }
 
   .dotFilms {
@@ -978,6 +975,11 @@ width: 233px;
 
   .films{
     margin: 15% -9%;
-    color: $rood;
   }
+}
+
+.pane{
+  background-image: url('../img/Wallpaper.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
